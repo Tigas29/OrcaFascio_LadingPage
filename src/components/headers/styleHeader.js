@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
+const Media = {
+  Laptop: "@media(max-width:1220px)",
+  Nav: "@media(max-width:1024px)",
+};
+
 export const Container = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
+  ${Media.Nav} {
+    display: none;
+  }
   header {
+    z-index: 9999;
     width: 90%;
     margin: auto;
     display: flex;
@@ -22,11 +30,19 @@ export const Container = styled.p`
     padding: 15px 0;
 
     p {
+      font-size: 17px;
+      ${Media.Laptop} {
+        font-size: 15px;
+      }
       font-family: "Lato";
       text-align: center;
       color: #312e2e;
       font-weight: 400;
       cursor: pointer;
+    }
+
+    hr {
+      visibility: hidden;
     }
 
     .left {
@@ -41,7 +57,9 @@ export const Container = styled.p`
     }
 
     .logo {
-      width: 239.13px;
+      width: 15vw;
+
+      max-width: 250px;
     }
     .LinkContent {
       display: flex;
@@ -49,9 +67,14 @@ export const Container = styled.p`
       justify-content: center;
     }
     .active {
+      visibility: visible;
       position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       bottom: 0;
-      width: 60.57px;
+      width: 3%;
       border: none;
       border: 1px solid #03608d;
     }

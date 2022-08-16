@@ -1,7 +1,8 @@
+import { Link, useLocation } from "react-router-dom";
 import { Container } from "./styleHeader.js";
 import logotipo from "../../imgs/logotipo.svg";
-import { Link } from "react-router-dom";
 export default function Header1() {
+  const path = useLocation().pathname;
   return (
     <>
       <Container>
@@ -11,26 +12,42 @@ export default function Header1() {
               <Link to="/">
                 <p>Home</p>
               </Link>
-              <hr className="active" />
+              <hr className={`${path === "/" ? "active" : ""}`} />
             </div>
-            <Link to="/">
-              <p>Quem somos</p>
-            </Link>
-            <Link to="/">
-              <p>Serviços</p>
-            </Link>
+            <div className="LinkContent">
+              <Link to="/">
+                <p>Quem somos</p>
+              </Link>
+              <hr className={`${path === "/sss" ? "active" : ""}`} />
+            </div>
+            <div className="LinkContent">
+              <Link to="/">
+                <p>Serviços</p>
+              </Link>
+              <hr className={`${path === "/sss" ? "active" : ""}`} />
+            </div>
           </div>
           <img className="logo" src={logotipo} alt="loqgo" />
           <div className="right">
-            <Link to="/">
-              <p>Contato</p>
-            </Link>
-            <Link to="/">
-              <p>Localização</p>
-            </Link>
-            <Link to="/">
-              <p>Dúvidas</p>
-            </Link>
+            <div className="LinkContent">
+              <Link to="/">
+                <p>Contato</p>
+              </Link>
+              <hr className={`${path === "/sss" ? "active" : ""}`} />
+            </div>
+            <div className="LinkContent">
+              <Link to="/">
+                <p>Localização</p>
+              </Link>
+              <hr className={`${path === "/sss" ? "active" : ""}`} />
+            </div>
+
+            <div className="LinkContent">
+              <Link to="/">
+                <p>Dúvidas</p>
+              </Link>
+              <hr className={`${path === "/sss" ? "active" : ""}`} />
+            </div>
           </div>
         </header>
       </Container>
