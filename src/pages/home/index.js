@@ -168,36 +168,37 @@ export function Home() {
       </OurServices>
       <Feedbacks>
         <div className="Container">
-          <div className="depoimentsArea">
+          <div className="rowcontent">
             <div className="depoimentsAreaContentTittle">
               <p>O que os nossos clientes falam de nós </p>
             </div>
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={50}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-            >
-              {Depoiments.map((item) => (
-                <SwiperSlide>
-                  <div className="depoimentText">
-                    <span>“</span>
-                    <p>{item.Depoiment}</p>
-                    <span>"</span>
-                  </div>
-                  <div className="depoimentText OwnerDepoiment">
-                    <p>{item.Nome}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <div className="depoimentsArea">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={50}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+              >
+                {Depoiments.map((item) => (
+                  <SwiperSlide>
+                    <div className="depoimentText">
+                      <span>“</span>
+                      <p>{item.Depoiment}</p>
+                      <span>"</span>
+                    </div>
+                    <div className="depoimentText OwnerDepoiment">
+                      <p>{item.Nome}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
-
           <div className="imageArea">
             <img src={backgroundDepoiments} alt="Imagem de depoimento" />
           </div>

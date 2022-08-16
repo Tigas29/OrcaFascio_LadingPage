@@ -338,17 +338,17 @@ export const OurServices = styled.div`
 `;
 
 export const Feedbacks = styled.div`
-  width: 100%;
-  background: #03608d;
+  width: 90%;
+  margin: auto;
 
   .Container {
     margin: auto;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #03608d;
 
-    .depoimentsArea {
+    .rowcontent {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -356,8 +356,6 @@ export const Feedbacks = styled.div`
       /* gap: 70px; */
       margin: auto;
       width: 50%;
-      height: 80vh;
-
       p {
         text-align: center;
         font-family: "Lilita One";
@@ -365,27 +363,36 @@ export const Feedbacks = styled.div`
         font-size: 30px;
         color: #ffffff;
       }
-      .swiper {
-        width: 100%;
-        --swiper-theme-color: #ffffff;
-        margin-left: auto;
-        margin-right: auto;
+      .depoimentsArea {
+        marg
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 95%;
 
-        .swiper-pagination,
-        .swiper-pagination-clickable .swiper-pagination-bullets {
-          bottom: 2%;
+        .swiper {
+          width: 100%;
+          --swiper-theme-color: #ffffff;
+          margin-left: auto;
+          margin-right: auto;
+
+          .swiper-pagination,
+          .swiper-pagination-clickable .swiper-pagination-bullets {
+            bottom: 2%;
+          }
         }
       }
-
       .swiper-slide {
-        height: 50vh;
+        /* height: 50vh; */
         text-align: center;
         font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        /* gap: -30px; */
+        gap: 30px;
 
         .depoimentText {
           width: 80%;
@@ -416,9 +423,13 @@ export const Feedbacks = styled.div`
       }
     }
     .imageArea {
-      width: 40vw;
+      width: 100%;
+      height: 100%;
+
+      margin: auto;
       img {
-        /* width: 100%; */
+        width: 100%;
+        height: 100%;
       }
     }
   }
