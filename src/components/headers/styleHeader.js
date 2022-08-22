@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Media = {
   Laptop: "@media(max-width:1220px)",
-  Nav: "@media(max-width:1024px)",
+  Nav: "@media(max-width:1000px)",
 };
 
 export const Container = styled.p`

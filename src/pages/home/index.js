@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import Header1 from "../../components/headers/header";
+import HeaderMob from "../../components/headers/hambuguer";
 import {
   Capa,
   WhoWeAre,
@@ -22,18 +23,28 @@ import instagram from "../../imgs/Instagram.svg";
 import Luiz from "../../imgs/Computador/LuizMakimoto.svg";
 import funcionarios from "../../imgs/Funcionarios.svg";
 import backgroundDepoiments from "../../imgs/depoimentsImage.svg";
+import backgroundDepoimentsTablet from "../../imgs/backgroundDepoimentsTablet.svg";
+
 import detalhes from "../../imgs/details.svg";
 import skills from "../../imgs/bloco skils.svg";
 import MapsEmbed from "../../EmbedGoogleMaps/index";
 import graydetails from "../../imgs/graydetails.svg";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { AiFillCalendar, AiFillPhone } from "react-icons/ai";
+import {
+  AiFillCalendar,
+  AiFillPhone,
+  AiOutlineInstagram,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import Footer from "../../components/Footer/index";
+import backgroundtablet from "../../imgs/Tablets/backgroundcapa.svg";
 export function Home() {
   return (
     <>
       <Header1 />
       <Capa>
+        <HeaderMob />
+
         <div className="containerCapa">
           <div>
             <div className="textContainer">
@@ -44,6 +55,10 @@ export function Home() {
               <p>
                 Desde de 1970 trazendo o melhor serviço para nossos clientes.
               </p>
+              <div className="iconsContainer">
+                <AiOutlineWhatsApp className="icons" />
+                <AiOutlineInstagram className="icons" />
+              </div>
             </div>
             <div className="imageArrowContr">
               <img
@@ -53,15 +68,23 @@ export function Home() {
               />
             </div>
           </div>
-
-          <div className="imageContainer">
-            <img
-              className="capaImage"
-              src={imageDireita}
-              alt="Imagem da direita"
-            />
+          <div className="teste">
+            <div className="imageContainer">
+              <img
+                src={backgroundtablet}
+                className="backgroundtablet"
+                alt="Imagem da direita"
+              />
+              <img
+                className="capaImage"
+                src={imageDireita}
+                alt="Imagem da direita"
+              />
+            </div>
           </div>
+          <div></div>
         </div>
+
         <div className="socialMediasCont">
           <div className="socialMedia">
             <img src={wpp} alt="wpp" />
@@ -69,6 +92,7 @@ export function Home() {
           </div>
         </div>
       </Capa>
+
       <WhoWeAre>
         <div className="whoWeAreCont">
           <div className="imageArea">
@@ -136,43 +160,45 @@ export function Home() {
             alt="Detalhes em vermelho"
           />
         </div>
-        <div className="cardsServices">
-          {Services.map((item) => (
-            <div className="card">
-              <div className="cardBody">
-                <img
-                  className="iconService"
-                  src={item.img}
-                  alt="Detalhes em vermelho"
-                />
-                <div className="cardTitleContainer">
-                  <h1 className="cardtittle">{item.tittle}</h1>
+        <div className="cardContainer">
+          <div className="cardsServices">
+            {Services.map((item) => (
+              <div className="card">
+                <div className="cardBody">
+                  <img
+                    className="iconService"
+                    src={item.img}
+                    alt="Detalhes em vermelho"
+                  />
+                  <div className="cardTitleContainer">
+                    <h1 className="cardtittle">{item.tittle}</h1>
+                    <Link to={item.link}>
+                      <span className="showMoreMessage">
+                        Clique para saber mais
+                      </span>
+                    </Link>
+                  </div>
+
                   <Link to={item.link}>
-                    <span className="showMoreMessage">
-                      Clique para saber mais
-                    </span>
+                    <img
+                      className="buttonGoToPage"
+                      src={setaBaixo}
+                      alt="Imagem da direita"
+                    />
                   </Link>
                 </div>
-
-                <Link to={item.link}>
-                  <img
-                    className="buttonGoToPage"
-                    src={setaBaixo}
-                    alt="Imagem da direita"
-                  />
-                </Link>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </OurServices>
       <Feedbacks>
         <div className="Container">
           <div className="rowcontent">
-            <div className="depoimentsAreaContentTittle">
-              <p>O que os nossos clientes falam de nós </p>
-            </div>
             <div className="depoimentsArea">
+              <div className="depoimentsAreaContentTittle">
+                <p>O que os nossos clientes falam de nós </p>
+              </div>
               <Swiper
                 slidesPerView={1}
                 spaceBetween={50}
@@ -191,7 +217,7 @@ export function Home() {
                       <p>{item.Depoiment}</p>
                       <span>"</span>
                     </div>
-                    <div className="depoimentText OwnerDepoiment">
+                    <div className="OwnerDepoiment">
                       <p>{item.Nome}</p>
                     </div>
                   </SwiperSlide>
@@ -200,7 +226,16 @@ export function Home() {
             </div>
           </div>
           <div className="imageArea">
-            <img src={backgroundDepoiments} alt="Imagem de depoimento" />
+            <img
+              className="pcDepoiments"
+              src={backgroundDepoiments}
+              alt="Imagem de depoimento"
+            />
+            <img
+              className="tabletDepoiments"
+              src={backgroundDepoimentsTablet}
+              alt="Imagem de depoimento"
+            />
           </div>
         </div>
       </Feedbacks>
