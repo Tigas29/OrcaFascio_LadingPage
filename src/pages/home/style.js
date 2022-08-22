@@ -548,7 +548,7 @@ export const Feedbacks = styled.div`
       justify-content: center;
       margin: auto;
       width: 50%;
-      height: 50vh;
+      /* height: 50vh; */
       ${Media.Tablet} {
         width: 100%;
       }
