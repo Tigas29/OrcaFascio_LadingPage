@@ -1,5 +1,9 @@
 import styled from "styled-components";
-
+const Media = {
+  Laptop: "@media(max-width:1220px)",
+  Nav: "@media(max-width:1000px)",
+  Tablet: "@media(max-width:1000px)",
+};
 export const Footerr = styled.div`
   width: 90%;
   margin: auto;
@@ -16,6 +20,10 @@ export const Footerr = styled.div`
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+
+    ${Media.Tablet} {
+      display: none;
+    }
   }
 
   .dowPart {

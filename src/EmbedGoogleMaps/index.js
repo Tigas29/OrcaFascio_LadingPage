@@ -5,13 +5,16 @@ import styled from "styled-components";
 const Media = {
   Desktop: "@media(max-width:1189px)",
   Tablet: "@media(max-width:768px)",
-  MobileL: "@media(max-width:550px)",
+  Phone: "@media(max-width:600px)",
   MobileM: "@media(max-width:375px)",
 };
 
 const Iframe = styled.div`
   width: 50vw;
   margin: auto;
+  ${Media.Phone} {
+    width: 100%;
+  }
   iframe {
     width: 100%;
   }

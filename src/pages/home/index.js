@@ -46,7 +46,7 @@ export function Home() {
         <HeaderMob />
 
         <div className="containerCapa">
-          <div>
+          <div className="containerLeft">
             <div className="textContainer">
               <h1>
                 A <span> melhor</span> e mais<br></br>

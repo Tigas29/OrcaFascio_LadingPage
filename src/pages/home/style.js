@@ -1,10 +1,10 @@
 import styled, { keyframes } from "styled-components";
 import backgroundchoseUs from "../../imgs/backgroundChosenUs.svg";
-import backgroundDepoiments from "../../imgs/backgroundDepoiments.svg";
 const Media = {
   Laptop: "@media(max-width:1220px)",
   Nav: "@media(max-width:1000px)",
   Tablet: "@media(max-width:1000px)",
+  PhoneLarge: "@media(max-width:600px)",
 };
 
 const Down = keyframes`
@@ -59,33 +59,58 @@ export const Capa = styled.div`
         display: none;
       }
     }
-
-    .textContainer {
-      max-width: 30vw;
+    ${Media.PhoneLarge} {
+      flex-direction: column-reverse;
+      margin-top: -50px;
+    }
+    .containerLeft {
       ${Media.Tablet} {
-        max-width: 40vw;
+        height: 16vh;
+        ${Media.PhoneLarge} {
+          height: auto;
+          width: 100%;
+        }
       }
-      h1 {
-        font-family: "Lilita One";
-        font-weight: 400;
-        font-size: 40px;
-        color: #312e2e;
-        ${Media.Laptop} {
-          font-size: 36px;
-        }
+
+      .textContainer {
+        max-width: 30vw;
         ${Media.Tablet} {
-          font-size: 34px;
+          max-width: 40vw;
         }
-        span {
+        ${Media.PhoneLarge} {
+          max-width: 100vw;
+          margin: auto;
+        }
+        h1 {
           font-family: "Lilita One";
           font-weight: 400;
           font-size: 40px;
-          color: #8c2e2e;
+          color: #312e2e;
           ${Media.Laptop} {
             font-size: 36px;
           }
           ${Media.Tablet} {
             font-size: 34px;
+          }
+          ${Media.PhoneLarge} {
+            font-size: 30px;
+            text-align: center;
+          }
+          span {
+            font-family: "Lilita One";
+            font-weight: 400;
+            font-size: 40px;
+            color: #8c2e2e;
+            ${Media.Laptop} {
+              font-size: 36px;
+            }
+            ${Media.Tablet} {
+              font-size: 34px;
+            }
+            ${Media.PhoneLarge} {
+              font-size: 30px;
+              text-align: center;
+            }
           }
         }
       }
@@ -103,7 +128,10 @@ export const Capa = styled.div`
         ${Media.Tablet} {
           font-size: 18px;
           display: flex;
-          height: 100%;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 15px;
+          text-align: center;
         }
       }
 
@@ -111,6 +139,10 @@ export const Capa = styled.div`
         display: flex;
         flex-direction: row;
         align-items: center;
+        ${Media.PhoneLarge} {
+          justify-content: center;
+          gap: 30px;
+        }
         gap: 50px;
         margin-top: 20px;
         .icons {
@@ -123,7 +155,7 @@ export const Capa = styled.div`
     .teste {
       ${Media.Tablet} {
         width: 50vw;
-        height: 68vh;
+        height: 75vh;
         margin: auto;
         display: flex;
         align-items: center;
@@ -142,16 +174,26 @@ export const Capa = styled.div`
           }
         }
         .capaImage {
-          width: 30vw;
-          max-width: 34vw;
+          width: 400px;
+          max-width: 600px;
+
           ${Media.Tablet} {
-            width: 400px;
+            max-width: 300px;
+
             margin-top: -9vh;
+          }
+          ${Media.PhoneLarge} {
+            width: 65vw;
+
+            max-width: 280px;
           }
         }
         .backgroundtablet {
           ${Media.Tablet} {
             max-width: 300px;
+          }
+          ${Media.PhoneLarge} {
+            max-width: 280px;
           }
         }
       }
@@ -180,11 +222,15 @@ export const Capa = styled.div`
 `;
 
 export const WhoWeAre = styled.div`
-  height: 50vw;
+  height: 50vh;
   background: #fff;
   display: flex;
   ${Media.Tablet} {
-    height: 90vw;
+    height: 90vh;
+  }
+  ${Media.PhoneLarge} {
+    padding-top: 90px;
+    height: 100vh;
   }
   .whoWeAreCont {
     width: 90%;
@@ -193,11 +239,17 @@ export const WhoWeAre = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
+    ${Media.PhoneLarge} {
+      flex-direction: column;
+      gap: 30px;
+    }
     .imageArea {
       width: 30vw;
       ${Media.Tablet} {
         width: 30vw;
+      }
+      ${Media.PhoneLarge} {
+        width: 65vw;
       }
     }
 
@@ -205,6 +257,9 @@ export const WhoWeAre = styled.div`
       display: block;
       width: 60%;
       margin: auto;
+      ${Media.PhoneLarge} {
+        width: 90%;
+      }
       h3 {
         width: 86%;
         margin: auto;
@@ -219,6 +274,12 @@ export const WhoWeAre = styled.div`
         ${Media.Tablet} {
           font-size: 17px;
           line-height: 19px;
+        }
+
+        ${Media.PhoneLarge} {
+          font-size: 15px;
+          line-height: 18px;
+          text-align: center;
         }
       }
 
@@ -245,8 +306,15 @@ export const WhoWeAre = styled.div`
     }
   }
   .btnContainer {
-    width: 85%;
+    width: 83%;
     margin: auto;
+    ${Media.PhoneLarge} {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
     .moreButton {
       display: block;
       margin-top: 100px;
@@ -255,6 +323,9 @@ export const WhoWeAre = styled.div`
       height: 44px;
       background: #107fb5;
 
+      ${Media.PhoneLarge} {
+        margin-top: 0;
+      }
       /* texto do botao */
       font-family: "Lato";
       font-size: 20px;
@@ -289,8 +360,8 @@ export const WhyChooseUs = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${Media.Tablet} {
-    height: 50vh;
+  ${Media.PhoneLarge} {
+    height: 100vh;
   }
   .Container {
     display: flex;
@@ -299,10 +370,28 @@ export const WhyChooseUs = styled.div`
     margin: auto;
     width: 90%;
 
+    ${Media.PhoneLarge} {
+      flex-direction: column;
+      gap: 90px;
+    }
     .ourEmplyess {
       position: relative;
+      .employees {
+        ${Media.PhoneLarge} {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
       .photoemplyees {
-        width: 80%;
+        width: 40vw;
+        ${Media.Tablet} {
+          width: 80%;
+        }
+        ${Media.PhoneLarge} {
+          width: 90vw;
+        }
       }
       .whitebox {
         position: absolute;
@@ -323,6 +412,11 @@ export const WhyChooseUs = styled.div`
           height: 60px;
           left: 40%;
         }
+        ${Media.PhoneLarge} {
+          width: 180px;
+          height: 50px;
+          left: 30%;
+        }
         p,
         span {
           font-family: "Lato";
@@ -336,6 +430,10 @@ export const WhyChooseUs = styled.div`
           ${Media.Tablet} {
             font-size: 17px;
             margin-bottom: 13px;
+          }
+          ${Media.PhoneLarge} {
+            font-size: 15px;
+            margin-bottom: 10px;
           }
         }
 
@@ -355,44 +453,58 @@ export const WhyChooseUs = styled.div`
       align-items: center;
       flex-direction: column;
       gap: 70px;
-
-      .tittle {
-        width: 100%;
-        h1 {
-          font-family: "Lilita One";
-          font-weight: 400;
-          font-size: 37px;
-          text-align: center;
-          color: #ffffff;
-          margin-bottom: 30px;
-          ${Media.Laptop} {
-            font-size: 32px;
-          }
-          ${Media.Tablet} {
-            font-size: 25px;
-          }
+      ${Media.PhoneLarge} {
+        width: 90%;
+      }
+    }
+    .tittle {
+      h1 {
+        font-family: "Lilita One";
+        font-weight: 400;
+        font-size: 37px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 30px;
+        ${Media.Laptop} {
+          font-size: 32px;
         }
-        .detailsRed {
-          position: absolute;
-          right: 600px;
-          width: 250px;
-          ${Media.Laptop} {
-            right: 350px;
-            width: 200px;
-          }
-          ${Media.Tablet} {
-            right: 19%;
-            width: 146px;
-          }
+        ${Media.Tablet} {
+          font-size: 25px;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 30px;
+        }
+      }
+      .detailsRed {
+        position: absolute;
+        right: 600px;
+        width: 250px;
+        ${Media.Laptop} {
+          right: 350px;
+          width: 200px;
+        }
+        ${Media.Tablet} {
+          right: 19%;
+          width: 146px;
+        }
+        ${Media.PhoneLarge} {
+          display: block;
+          position: relative;
+          margin: auto;
+          width: 200px;
         }
       }
     }
-    .skills {
-      img {
-        width: 24vw;
-        /* ${Media.Laptop} {
+  }
+  .skills {
+    img {
+      width: 24vw;
+      max-width: 350px;
+      /* ${Media.Laptop} {
           width: 24vw;
         } */
+      ${Media.PhoneLarge} {
+        width: 65vw;
       }
     }
   }
@@ -422,6 +534,9 @@ export const OurServices = styled.div`
       }
       ${Media.Tablet} {
         font-size: 33px;
+      }
+      ${Media.PhoneLarge} {
+        font-size: 30px;
       }
     }
     img {
@@ -487,6 +602,11 @@ export const OurServices = styled.div`
             }
             ${Media.Tablet} {
               width: 300px;
+              height: 50px;
+            }
+            ${Media.PhoneLarge} {
+              width: 200px;
+              height: 50px;
             }
           }
 
@@ -498,6 +618,10 @@ export const OurServices = styled.div`
             color: #312e2e;
             ${Media.Laptop} {
               font-size: 25px;
+            }
+
+            ${Media.Tablet} {
+              font-size: 20px;
             }
           }
 
@@ -512,6 +636,9 @@ export const OurServices = styled.div`
             ${Media.Laptop} {
               font-size: 15px;
             }
+            ${Media.Tablet} {
+              font-size: 13px;
+            }
           }
 
           .buttonGoToPage {
@@ -521,6 +648,9 @@ export const OurServices = styled.div`
             transition: all 0.3s ease-out;
             ${Media.Laptop} {
               width: 70px;
+            }
+            ${Media.PhoneLarge} {
+              width: 50px;
             }
           }
         }
@@ -567,6 +697,9 @@ export const Feedbacks = styled.div`
         ${Media.Tablet} {
           font-size: 25px;
         }
+        ${Media.PhoneLarge} {
+          font-size: 20px;
+        }
       }
       .depoimentsArea {
         display: flex;
@@ -575,6 +708,9 @@ export const Feedbacks = styled.div`
         justify-content: center;
         margin: auto;
         width: 95%;
+        .depoimentsAreaContentTittle {
+          margin-top: 30px;
+        }
         .swiper {
           width: 100%;
           --swiper-theme-color: #ffffff;
@@ -597,6 +733,9 @@ export const Feedbacks = styled.div`
         /* gap: 30px; */
         .depoimentText {
           width: 80%;
+          ${Media.PhoneLarge} {
+            margin-top: 50px;
+          }
           p {
             font-family: "Lato";
             font-style: normal;
@@ -610,6 +749,9 @@ export const Feedbacks = styled.div`
             }
             ${Media.Tablet} {
               font-size: 17px;
+            }
+            ${Media.PhoneLarge} {
+              font-size: 15px;
             }
           }
           span {
@@ -627,6 +769,9 @@ export const Feedbacks = styled.div`
             ${Media.Tablet} {
               font-size: 80px;
             }
+            ${Media.PhoneLarge} {
+              font-size: 60px;
+            }
             :nth-child(3) {
               float: right;
               font-size: 100px;
@@ -636,6 +781,9 @@ export const Feedbacks = styled.div`
               }
               ${Media.Tablet} {
                 font-size: 80px;
+              }
+              ${Media.PhoneLarge} {
+                font-size: 60px;
               }
             }
           }
@@ -683,6 +831,9 @@ export const ContactUs = styled.div`
     ${Media.Tablet} {
       font-size: 33px;
     }
+    ${Media.PhoneLarge} {
+      font-size: 30px;
+    }
   }
 
   .contactContainer {
@@ -691,12 +842,18 @@ export const ContactUs = styled.div`
     align-items: center;
     background-color: #8c2e2e;
     justify-content: space-between;
+    ${Media.PhoneLarge} {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .areaContact {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       margin: auto;
+
       .tittlePart {
         width: 100%;
         h2 {
@@ -710,8 +867,13 @@ export const ContactUs = styled.div`
             font-size: 35px;
           }
           ${Media.Tablet} {
+            margin: auto;
             width: 90%;
             font-size: 33px;
+          }
+          ${Media.PhoneLarge} {
+            margin-top: 20px;
+            width: 100%;
           }
         }
 
@@ -722,6 +884,9 @@ export const ContactUs = styled.div`
 
           ${Media.Tablet} {
             width: 15vw;
+          }
+          ${Media.PhoneLarge} {
+            width: 150px;
           }
         }
       }
@@ -734,9 +899,14 @@ export const ContactUs = styled.div`
       gap: 60px;
       width: 80%;
       margin: auto;
+      ${Media.PhoneLarge} {
+        margin-top: 20px;
+        gap: 40px;
+      }
       .globalSetings {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
         p {
           font-family: "Lato";
@@ -749,6 +919,9 @@ export const ContactUs = styled.div`
           }
           ${Media.Laptop} {
             font-size: 13px;
+          }
+          ${Media.PhoneLarge} {
+            font-size: 15px;
           }
         }
         .icons {

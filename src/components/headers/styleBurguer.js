@@ -5,22 +5,26 @@ const Media = {
 };
 
 export const Header = styled.header`
-  ${Media.Nav} {
-    display: block;
-  }
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: 90%;
   margin: auto;
-  padding-top: 30px;
+  ${Media.Nav} {
+    display: flex;
+  }
 
   .containter {
-    width: 100%;
-    z-index: 999;
-    position: absolute;
+    z-index: 9999;
+    width: 90%;
+    margin: auto;
     display: flex;
+    top: 0;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
+    margin-top: 40px;
+    padding: 15px 0;
   }
   img {
     width: 200px;
