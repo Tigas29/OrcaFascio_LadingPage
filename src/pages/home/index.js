@@ -15,6 +15,7 @@ import {
   OurServices,
   Feedbacks,
   ContactUs,
+  Main,
 } from "./style";
 import imageDireita from "../../imgs/Computador/MachineImageRigth.svg";
 import setaBaixo from "../../imgs/Computador/setaBaixo.svg";
@@ -40,7 +41,7 @@ import Footer from "../../components/Footer/index";
 import backgroundtablet from "../../imgs/Tablets/backgroundcapa.svg";
 export function Home() {
   return (
-    <>
+    <Main>
       <Header1 />
       <Capa>
         <HeaderMob />
@@ -56,16 +57,29 @@ export function Home() {
                 Desde de 1970 trazendo o melhor serviço para nossos clientes.
               </p>
               <div className="iconsContainer">
-                <AiOutlineWhatsApp className="icons" />
-                <AiOutlineInstagram className="icons" />
+                <a
+                  href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
+                  target="blanked"
+                >
+                  <AiOutlineWhatsApp className="icons" />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/autoeletricopioneiro/"
+                  target="blanked"
+                >
+                  <AiOutlineInstagram className="icons" />
+                </a>
               </div>
             </div>
             <div className="imageArrowContr">
-              <img
-                className="imageArrowDown"
-                src={setaBaixo}
-                alt="Imagem da direita"
-              />
+              <a href="#QuemSomos">
+                <img
+                  className="imageArrowDown"
+                  src={setaBaixo}
+                  alt="Imagem da direita"
+                />
+              </a>
             </div>
           </div>
           <div className="teste">
@@ -87,13 +101,24 @@ export function Home() {
 
         <div className="socialMediasCont">
           <div className="socialMedia">
-            <img src={wpp} alt="wpp" />
-            <img src={instagram} alt="instagram" />
+            <a
+              href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
+              target="blanked"
+            >
+              <img src={wpp} alt="wpp" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/autoeletricopioneiro/"
+              target="blanked"
+            >
+              <img src={instagram} alt="instagram" />
+            </a>
           </div>
         </div>
       </Capa>
 
-      <WhoWeAre>
+      <WhoWeAre id="QuemSomos">
         <div className="whoWeAreCont">
           <div className="imageArea">
             <img src={Luiz} alt="luiz" />
@@ -250,10 +275,15 @@ export function Home() {
             <div className="infosContact">
               <div className="location  globalSetings">
                 <FaMapMarkerAlt className="icons" />
-                <p>
-                  Estrada de Itapecerica, 1869, Vila Maracanã, 05835-005, S.
-                  Paulo, SP (Ao lado da AABB)
-                </p>
+                <a
+                  href="https://www.google.com.br/maps/place/Auto+Técnica+Pioneiro/@-23.6497437,-46.7533495,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce53dec3f7e1a1:0x55bf9de00508414d!8m2!3d-23.6497486!4d-46.7511608"
+                  target="blanked"
+                >
+                  <p>
+                    Estrada de Itapecerica, 1869, Vila Maracanã, 05835-005, S.
+                    Paulo, SP (Ao lado da AABB)
+                  </p>
+                </a>
               </div>
               <div className="workTime globalSetings">
                 <AiFillCalendar className="icons" />
@@ -261,7 +291,11 @@ export function Home() {
               </div>
               <div className="telephone globalSetings">
                 <AiFillPhone className="icons" />
-                <p>(11)5512-9313 ou (11)94107-0499</p>
+                <p>
+                  {" "}
+                  <a href="tel:+55115512-9313"> (11)5512-9313</a> ou
+                  <a href="tel:+551194107-0499"> (11)94107-0499</a>
+                </p>
               </div>
             </div>
           </div>
@@ -271,6 +305,6 @@ export function Home() {
         </div>
         <Footer />
       </ContactUs>
-    </>
+    </Main>
   );
 }

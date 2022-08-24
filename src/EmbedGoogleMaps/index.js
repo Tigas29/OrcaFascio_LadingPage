@@ -13,7 +13,7 @@ const Iframe = styled.div`
   width: 50vw;
   margin: auto;
   ${Media.Phone} {
-    width: 100%;
+    width: 90vw;
   }
   iframe {
     width: 100%;

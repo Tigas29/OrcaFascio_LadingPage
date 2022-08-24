@@ -11,8 +11,16 @@ const Down = keyframes`
   0%   { transform: translateY(0); }
         50%  { transform: translateY(10px); }
 `;
-
+export const Main = styled.div`
+  body {
+    scroll-behavior: smooth;
+  }
+`;
 export const Capa = styled.div`
+  body {
+    scroll-behavior: smooth;
+  }
+
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
@@ -30,6 +38,8 @@ export const Capa = styled.div`
     }
   }
   .containerCapa {
+    scroll-behavior: smooth;
+
     position: relative;
     height: 94vh;
     width: 90%;
@@ -42,8 +52,12 @@ export const Capa = styled.div`
     }
     .imageArrowContr {
       position: relative;
+      scroll-behavior: smooth;
+
       .imageArrowDown {
         position: absolute;
+        scroll-behavior: smooth;
+
         width: 75px;
         height: 78px;
         cursor: pointer;
@@ -61,7 +75,6 @@ export const Capa = styled.div`
     }
     ${Media.PhoneLarge} {
       flex-direction: column-reverse;
-      margin-top: -50px;
     }
     .containerLeft {
       ${Media.Tablet} {
@@ -130,15 +143,21 @@ export const Capa = styled.div`
           display: flex;
         }
         ${Media.PhoneLarge} {
+          display: block;
+          margin: auto;
           font-size: 15px;
           text-align: center;
         }
       }
 
       .iconsContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: none;
+        ${Media.Tablet} {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
         ${Media.PhoneLarge} {
           justify-content: center;
           gap: 30px;
@@ -155,7 +174,7 @@ export const Capa = styled.div`
     .teste {
       ${Media.Tablet} {
         width: 50vw;
-        height: 75vh;
+        height: 50vh;
         margin: auto;
         display: flex;
         align-items: center;
@@ -206,15 +225,16 @@ export const Capa = styled.div`
     background-color: #f6f6f6;
     width: 100%;
     /* height: 5vh; */
-    padding: 30px 0;
+    padding: 10px 0;
     .socialMedia {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 60px;
 
+      a,
       img {
-        width: 40px;
+        width: 50px;
         cursor: pointer;
       }
     }
@@ -222,15 +242,13 @@ export const Capa = styled.div`
 `;
 
 export const WhoWeAre = styled.div`
-  height: 50vh;
+  height: 100vh;
   background: #fff;
   display: flex;
   ${Media.Tablet} {
-    height: 90vh;
   }
   ${Media.PhoneLarge} {
     padding-top: 90px;
-    height: 100vh;
   }
   .whoWeAreCont {
     width: 90%;
