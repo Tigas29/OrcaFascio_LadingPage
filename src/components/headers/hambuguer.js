@@ -9,7 +9,9 @@ export default function HeaderMob() {
   return (
     <Header>
       <div className="containter">
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <GiHamburgerMenu className="icons" />
         <nav>
           <div className="options">

@@ -27,7 +27,9 @@ export default function Header1() {
               <hr className={`${path === "/sss" ? "active" : ""}`} />
             </div>
           </div>
-          <img className="logo" src={logotipo} alt="loqgo" />
+          <Link to="/">
+            <img className="logo" src={logotipo} alt="loqgo" />
+          </Link>
           <div className="right">
             <div className="LinkContent">
               <Link to="/">
