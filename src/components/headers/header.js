@@ -15,10 +15,10 @@ export default function Header1() {
               <hr className={`${path === "/" ? "active" : ""}`} />
             </div>
             <div className="LinkContent">
-              <Link to="/">
+              <Link to="/sobreNos">
                 <p>Quem somos</p>
               </Link>
-              <hr className={`${path === "/sss" ? "active" : ""}`} />
+              <hr className={`${path === "/sobreNos" ? "active" : ""}`} />
             </div>
             <div className="LinkContent">
               <Link to="/">

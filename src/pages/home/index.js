@@ -43,9 +43,8 @@ export function Home() {
   return (
     <Main>
       <Header1 />
+      <HeaderMob />
       <Capa>
-        <HeaderMob />
-
         <div className="containerCapa">
           <div className="containerLeft">
             <div className="textContainer">
@@ -138,7 +137,9 @@ export function Home() {
             </h3>
             <span>"</span>
             <div className="btnContainer">
-              <button className="moreButton">Saiba Mais</button>
+              <Link to="/sobreNos">
+                <button className="moreButton">Saiba Mais</button>
+              </Link>
             </div>
           </div>
         </div>
