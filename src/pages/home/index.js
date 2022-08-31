@@ -177,7 +177,7 @@ export function Home() {
           </div>
         </div>
       </WhyChooseUs>
-      <OurServices>
+      <OurServices id="teste">
         <div className="tittle">
           <h1> Nossos Serviços</h1>
           <img
@@ -304,8 +304,8 @@ export function Home() {
             <MapsEmbed />
           </div>
         </div>
-        <Footer />
       </ContactUs>
+      <Footer />
     </Main>
   );
 }

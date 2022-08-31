@@ -78,7 +78,7 @@ export const Capa = styled.div`
     }
     .containerLeft {
       ${Media.Tablet} {
-        height: 16vh;
+        height: 0vh;
         ${Media.PhoneLarge} {
           height: auto;
           width: 100%;
@@ -174,7 +174,7 @@ export const Capa = styled.div`
     .teste {
       ${Media.Tablet} {
         width: 50vw;
-        height: 50vh;
+        height: 60vh;
         margin: auto;
         display: flex;
         align-items: center;
@@ -182,6 +182,9 @@ export const Capa = styled.div`
         margin-top: -50px;
       }
 
+      ${Media.PhoneLarge} {
+        height: 8vh;
+      }
       .imageContainer {
         ${Media.Tablet} {
           display: flex;
@@ -193,8 +196,8 @@ export const Capa = styled.div`
           }
         }
         .capaImage {
-          width: 400px;
-          max-width: 600px;
+          width: 40vw;
+          max-width: 500px;
 
           ${Media.Tablet} {
             max-width: 300px;
@@ -203,8 +206,6 @@ export const Capa = styled.div`
           }
           ${Media.PhoneLarge} {
             width: 65vw;
-
-            max-width: 280px;
           }
         }
         .backgroundtablet {
@@ -248,7 +249,7 @@ export const WhoWeAre = styled.div`
   ${Media.Tablet} {
   }
   ${Media.PhoneLarge} {
-    padding-top: 90px;
+    height: 150vh;
   }
   .whoWeAreCont {
     width: 90%;
@@ -259,7 +260,7 @@ export const WhoWeAre = styled.div`
     justify-content: center;
     ${Media.PhoneLarge} {
       flex-direction: column;
-      gap: 30px;
+      gap: 15px;
     }
     .imageArea {
       width: 30vw;
@@ -379,7 +380,8 @@ export const WhyChooseUs = styled.div`
   align-items: center;
   justify-content: center;
   ${Media.PhoneLarge} {
-    height: 100vh;
+    height: 110vh;
+    padding-top: 20px;
   }
   .Container {
     display: flex;

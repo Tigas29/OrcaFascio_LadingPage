@@ -6,13 +6,13 @@ const Media = {
 
 export const Header = styled.header`
   display: none;
-
   ${Media.Nav} {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: auto;
+    background: white;
 
     nav {
       position: fixed;
@@ -58,19 +58,26 @@ export const Header = styled.header`
     }
 
     .containter {
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
       z-index: 99;
+      margin: auto;
       width: 90%;
+      z-index: 99;
       margin: auto;
       display: flex;
       top: 0;
       position: fixed;
       align-items: center;
       justify-content: space-between;
-      margin-top: 40px;
-      padding: 15px 0;
+      /* margin-top: 40px; */
+      padding: 15px 10%;
+      background: white;
     }
     img {
-      width: 200px;
+      width: 190px;
       z-index: 100;
     }
 

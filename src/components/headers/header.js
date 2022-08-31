@@ -21,10 +21,10 @@ export default function Header1() {
               <hr className={`${path === "/sobreNos" ? "active" : ""}`} />
             </div>
             <div className="LinkContent">
-              <Link to="/">
+              <Link to="/#teste">
                 <p>Serviços</p>
               </Link>
-              <hr className={`${path === "/sss" ? "active" : ""}`} />
+              <hr className={`${path === "/#teste" ? "active" : ""}`} />
             </div>
           </div>
           <Link to="/">
@@ -32,15 +32,18 @@ export default function Header1() {
           </Link>
           <div className="right">
             <div className="LinkContent">
-              <Link to="/">
+              <Link to="/Contato">
                 <p>Contato</p>
               </Link>
-              <hr className={`${path === "/sss" ? "active" : ""}`} />
+              <hr className={`${path === "/Contato" ? "active" : ""}`} />
             </div>
             <div className="LinkContent">
-              <Link to="/">
+              <a
+                href="https://www.google.com.br/maps/place/Auto+Técnica+Pioneiro/@-23.6497437,-46.7533495,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce53dec3f7e1a1:0x55bf9de00508414d!8m2!3d-23.6497486!4d-46.7511608"
+                target="blanked"
+              >
                 <p>Localização</p>
-              </Link>
+              </a>
               <hr className={`${path === "/sss" ? "active" : ""}`} />
             </div>
 

@@ -13,6 +13,7 @@ export default function HeaderMob() {
           <img src={logo} alt="logo" />
         </Link>
         <GiHamburgerMenu className="icons" />
+
         <nav>
           <div className="options">
             <Link to="/">Teste</Link>

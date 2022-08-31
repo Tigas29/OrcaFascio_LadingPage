@@ -18,6 +18,7 @@ export const FrontCover = styled.div`
     justify-content: space-between;
     align-items: center;
     ${Media.Tablet} {
+      margin-top: 10vh;
       flex-direction: column;
       justify-content: center;
       gap: 50px;
@@ -145,7 +146,7 @@ export const RoadMap = styled.div`
       ${Media.PhoneLarge} {
         border: 20px solid #8c2e2e;
         left: 0;
-        height: 73vh;
+        height: 100vh;
       }
     }
     .history {
