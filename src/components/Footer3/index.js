@@ -1,32 +1,26 @@
 import logo from "../../imgs/footer/logo.svg";
 import { Footerr } from "./style";
 import { Link } from "react-router-dom";
-export default function Footer() {
+export default function Footer3() {
   return (
     <div>
       <Footerr>
         <div className="options">
           <div>
-            <Link to="/">
+            <Link to="/sobrenos">
               <p>Quem somos</p>
             </Link>
           </div>
 
           <div>
-            <Link to="/">
+            <Link to="/Servico">
               <p>Serviços</p>
             </Link>
           </div>
 
           <div>
-            <Link to="/">
+            <Link to="/contato">
               <p>Contato</p>
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/">
-              <p>Termos de uso</p>
             </Link>
           </div>
         </div>

@@ -32,6 +32,12 @@ export const Header = styled.header`
       box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(20px);
       .options {
+        .closeIcon {
+          position: absolute;
+          top: -17%;
+          right: -12%;
+        }
+        width: 100%;
         margin: auto;
         height: 100%;
         display: flex;
@@ -53,8 +59,18 @@ export const Header = styled.header`
         transition: 0.7s;
       }
       opacity: 0;
+      display: none;
       pointer-events: none;
       transition: 0.5s;
+      ${({ isVisible }) =>
+        isVisible &&
+        css`
+          display: block;
+          opacity: 1;
+          pointer-events: auto;
+
+          transform: translateY(0px);
+        `}
     }
 
     .containter {
@@ -82,7 +98,7 @@ export const Header = styled.header`
     }
 
     .icons {
-      z-index: 100;
+      /* z-index: 100; */
       width: 40px;
       height: 40px;
       cursor: pointer;

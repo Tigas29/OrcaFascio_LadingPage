@@ -41,6 +41,18 @@ export const ContactUs = styled.div`
       justify-content: center;
       flex-direction: column;
       margin: auto;
+      .iconsContainer {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        .icons {
+          align-items: center;
+          margin-left: 20px;
+          width: 40px;
+          height: 40px;
+          color: #d9d9d9;
+        }
+      }
 
       .tittlePart {
         width: 100%;

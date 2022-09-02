@@ -37,8 +37,9 @@ import {
   AiOutlineInstagram,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import Footer from "../../components/Footer/index";
+import Footer3 from "../../components/Footer3/index";
 import backgroundtablet from "../../imgs/Tablets/backgroundcapa.svg";
+import { useState } from "react";
 
 export function Home() {
   return (
@@ -306,7 +307,7 @@ export function Home() {
           </div>
         </div>
       </ContactUs>
-      <Footer />
+      <Footer3 />
     </Main>
   );
 }

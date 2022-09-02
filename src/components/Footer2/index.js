@@ -7,32 +7,20 @@ export default function Footer2() {
       <Footerr>
         <div className="options">
           <div>
-            <Link to="/">
+            <Link to="/sobrenos">
               <p>Quem somos</p>
             </Link>
           </div>
 
           <div>
-            <Link to="/">
+            <Link to="/Servico">
               <p>Serviços</p>
             </Link>
           </div>
 
           <div>
-            <Link to="/">
+            <Link to="/contato">
               <p>Contato</p>
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/">
-              <p>Termos de uso</p>
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/">
-              <p>Políticas de privacidade </p>
             </Link>
           </div>
         </div>

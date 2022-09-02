@@ -10,7 +10,7 @@ import {
 } from "react-icons/ai";
 import Header1 from "../../components/headers/header";
 import HeaderMob from "../../components/headers/hambuguer";
-import Footer from "../../components/Footer/index";
+import Footer3 from "../../components/Footer3/index";
 import { ContactUs, Main } from "./style";
 export function Contact() {
   return (
@@ -49,6 +49,21 @@ export function Contact() {
                   <a href="tel:+551194107-0499"> (11)94107-0499</a>
                 </p>
               </div>
+              <div className="iconsContainer">
+                {" "}
+                <a
+                  href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
+                  target="blanked"
+                >
+                  <AiOutlineWhatsApp className="icons" />
+                </a>
+                <a
+                  href="https://www.instagram.com/autoeletricopioneiro/"
+                  target="blanked"
+                >
+                  <AiOutlineInstagram className="icons" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="googleMaps">
@@ -56,7 +71,7 @@ export function Contact() {
           </div>
         </div>
       </ContactUs>
-      <Footer />
+      <Footer3 />
     </Main>
   );
 }
