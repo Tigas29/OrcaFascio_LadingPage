@@ -15,7 +15,9 @@ export function Injecao() {
         <div className="containerCapa">
           <div className="tittle">
             <h1>INJEÇÃO ELETRÔNICA </h1>
-            <img src={btn} alt="button" />
+            <a href="#down">
+              <img src={btn} alt="button" />
+            </a>
           </div>
           <div className="background">
             <img
@@ -36,7 +38,7 @@ export function Injecao() {
           </div>
         </div>
       </Capa>
-      <Box>
+      <Box id="down">
         <div className="container">
           <div className="whitePart">
             <div className="textArea">
@@ -53,7 +55,12 @@ export function Injecao() {
                 <p>Reprogramação de Combustível</p>
               </div>
             </div>
-            <button>Entre em contato</button>
+            <a
+              href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
+              target="blanked"
+            >
+              <button>Entre em contato</button>
+            </a>
           </div>
         </div>
       </Box>

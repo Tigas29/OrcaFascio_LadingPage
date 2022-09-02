@@ -207,6 +207,7 @@ export const Box = styled.div`
     }
   }
   button {
+    cursor: pointer;
     bottom: -50px;
     left: -76px;
     position: absolute;
