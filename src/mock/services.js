@@ -6,16 +6,16 @@ export const Services = [
   {
     tittle: "ELÉTRICA ",
     img: eletrica,
-    link: "/*",
+    link: "/eletrica",
   },
   {
     tittle: "INJEÇÃO ELETRÔNICA",
     img: injecaoEletronica,
-    link: "/*",
+    link: "/injecao",
   },
   {
     tittle: "MECÂNICA",
     img: mecanica,
-    link: "/*",
+    link: "/mecanica",
   },
 ];

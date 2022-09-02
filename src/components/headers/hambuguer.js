@@ -1,11 +1,20 @@
 import logo from "../../imgs/logotipo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "./styleBurguer";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
 import { useEffect } from "react";
 
 export default function HeaderMob() {
+  const path = useLocation().pathname;
+  useEffect(() => {
+    function scrollUp() {
+      window.scrollTo({
+        top: 0,
+        // behavior: "smooth",
+      });
+    }
+    scrollUp();
+  }, [path]);
   return (
     <Header>
       <div className="containter">

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Route } from "react-router-dom";
 import Header1 from "../../components/headers/header";
 import HeaderMob from "../../components/headers/hambuguer";
 import {
@@ -39,6 +39,7 @@ import {
 } from "react-icons/ai";
 import Footer from "../../components/Footer/index";
 import backgroundtablet from "../../imgs/Tablets/backgroundcapa.svg";
+
 export function Home() {
   return (
     <Main>
@@ -137,7 +138,7 @@ export function Home() {
             </h3>
             <span>"</span>
             <div className="btnContainer">
-              <Link to="/sobreNos">
+              <Link to="/sobrenos">
                 <button className="moreButton">Saiba Mais</button>
               </Link>
             </div>

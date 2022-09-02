@@ -3,6 +3,7 @@ const Media = {
   Laptop: "@media(max-width:1220px)",
   Nav: "@media(max-width:1000px)",
   Tablet: "@media(max-width:1000px)",
+  PhoneLarge: "@media(max-width:600px)",
 };
 
 export const Footerr = styled.div`
@@ -15,6 +16,9 @@ export const Footerr = styled.div`
   justify-content: flex-end;
   align-content: center;
 
+  ${Media.Tablet} {
+    height: 90vh;
+  }
   .options {
     width: 100%;
     display: flex;

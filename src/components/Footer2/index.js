@@ -1,7 +1,7 @@
 import logo from "../../imgs/footer/logo.svg";
 import { Footerr } from "./style";
 import { Link } from "react-router-dom";
-export default function Footer() {
+export default function Footer2() {
   return (
     <div>
       <Footerr>

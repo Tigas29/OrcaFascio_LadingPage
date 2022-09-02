@@ -1,10 +1,20 @@
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Container } from "./styleHeader.js";
 import logotipo from "../../imgs/logotipo.svg";
 export default function Header1() {
   const path = useLocation().pathname;
+  useEffect(() => {
+    function scrollUp() {
+      window.scrollTo({
+        top: 0,
+        // behavior: "smooth",
+      });
+    }
+    scrollUp();
+  }, [path]);
   return (
-    <>
+    <div>
       <Container>
         <header>
           <div className="left">
@@ -21,10 +31,10 @@ export default function Header1() {
               <hr className={`${path === "/sobreNos" ? "active" : ""}`} />
             </div>
             <div className="LinkContent">
-              <Link to="/#teste">
+              <Link to="/Servico">
                 <p>Serviços</p>
               </Link>
-              <hr className={`${path === "/#teste" ? "active" : ""}`} />
+              <hr className={`${path === "/Servico" ? "active" : ""}`} />
             </div>
           </div>
           <Link to="/">
@@ -56,6 +66,6 @@ export default function Header1() {
           </div>
         </header>
       </Container>
-    </>
+    </div>
   );
 }

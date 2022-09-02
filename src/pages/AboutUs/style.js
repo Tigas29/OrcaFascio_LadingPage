@@ -147,6 +147,7 @@ export const RoadMap = styled.div`
         border: 20px solid #8c2e2e;
         left: 0;
         height: 100vh;
+        margin-top: -40vh;
       }
     }
     .history {

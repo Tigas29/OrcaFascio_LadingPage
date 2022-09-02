@@ -196,8 +196,7 @@ export const Capa = styled.div`
           }
         }
         .capaImage {
-          width: 40vw;
-          max-width: 500px;
+          width: 30vw;
 
           ${Media.Tablet} {
             max-width: 300px;

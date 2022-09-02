@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Header1 from "../../components/headers/header";
 import HeaderMob from "../../components/headers/hambuguer";
 import { FrontCover, RoadMap } from "./style";
@@ -8,7 +8,7 @@ import Footer from "../../components/Footer/index";
 import owners from "../../imgs/Computador/aboutUs/ownerPhoto.png";
 export function AboutUs() {
   return (
-    <>
+    <div>
       <Header1 />
       <HeaderMob />
       <FrontCover>
@@ -48,6 +48,6 @@ export function AboutUs() {
         </div>
       </RoadMap>
       <Footer />
-    </>
+    </div>
   );
 }
