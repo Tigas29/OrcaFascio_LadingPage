@@ -8,10 +8,7 @@ export default function HeaderMob() {
   const path = useLocation().pathname;
   useEffect(() => {
     function scrollUp() {
-      window.scrollTo({
-        top: 0,
-        // behavior: "smooth",
-      });
+      window.scrollTo(0, 0);
     }
     scrollUp();
   }, [path]);
