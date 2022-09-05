@@ -43,7 +43,7 @@ export function Mecanica() {
           <div className="whitePart">
             <div className="textArea">
               <div className="tittleBox">
-                <p>O que fazemos da parte da parte mecânica do seu carro.</p>
+                <p>O que fazemos da parte mecânica do seu carro.</p>
               </div>
               <div className="options">
                 <span></span>

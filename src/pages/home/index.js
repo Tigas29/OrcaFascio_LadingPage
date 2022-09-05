@@ -17,12 +17,12 @@ import {
   ContactUs,
   Main,
 } from "./style";
-import imageDireita from "../../imgs/Computador/MachineImageRigth.svg";
+import imageDireita from "../../imgs/Computador/MachineImageRigth.png";
 import setaBaixo from "../../imgs/Computador/setaBaixo.svg";
 import wpp from "../../imgs/WhatsApp.svg";
 import instagram from "../../imgs/Instagram.svg";
-import Luiz from "../../imgs/Computador/LuizMakimoto.svg";
-import funcionarios from "../../imgs/Funcionarios.svg";
+import Luiz from "../../imgs/Computador/LuizMakimoto.png";
+import funcionarios from "../../imgs/Funcionarios.png";
 import backgroundDepoiments from "../../imgs/depoimentsImage.svg";
 import backgroundDepoimentsTablet from "../../imgs/backgroundDepoimentsTablet.svg";
 
@@ -55,7 +55,7 @@ export function Home() {
                 <span>confiável</span> oficina da região
               </h1>
               <p>
-                Desde de 1970 trazendo o melhor serviço para nossos clientes.
+                Desde 1970 trazendo o melhor serviço para nossos clientes.
               </p>
               <div className="iconsContainer">
                 <a
@@ -134,8 +134,9 @@ export function Home() {
               e na qualidade do serviço prestado.
               <br></br>
               <br></br>
-              Aí, em 1970, abriu sua própria oficina, o Auto Elétrico Pioneiro,
-              no bairro Vila das Belezas, zona sul da cidade de São Paulo...
+              Então,em 1970, abriu sua própria oficina, o Auto Elétrico
+              Pioneiro, no bairro Vila das Belezas, zona sul da cidade de São
+              Paulo...
             </h3>
             <span>"</span>
             <div className="btnContainer">

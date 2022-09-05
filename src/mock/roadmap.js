@@ -9,7 +9,7 @@ export const Road = [
   },
   {
     year: "1970",
-    text: " Aí, em 1970, abriu sua própria oficina, o Auto Elétrico Pioneiro, no bairro Vila das Belezas, zona sul da cidade de São Paulo. E, de fato, esse nome era bem apropriado, pois sua oficina foi a primeira da região. ",
+    text: " Então, em 1970, abriu sua própria oficina, o Auto Elétrico Pioneiro, no bairro Vila das Belezas, zona sul da cidade de São Paulo. E, de fato, esse nome era bem apropriado, pois sua oficina foi a primeira da região. ",
     img: padrao,
   },
   {
