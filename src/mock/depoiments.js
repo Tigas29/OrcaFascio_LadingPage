@@ -26,4 +26,10 @@ export const Depoiments = [
 
     Nome: "Gerson Santos",
   },
+  {
+    Depoiment:
+      "Ao Sr Luiz, Alexandre e Fábio. Sou amigo deles a 40 anos e cliente dessas pessoas excepcionais a pelo menos 22 anos.  Além de uma família maravilhosa ainda prestam aí na sua Empresa Auto Elétrico Pioneiro um serviço confiável de qualidade e com preço justo! Eu indico, recomendo e ponho a mão no fogo por essas pessoas!",
+
+    Nome: "David Oliveira",
+  },
 ];
