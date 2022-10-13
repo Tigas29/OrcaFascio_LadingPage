@@ -275,6 +275,7 @@ export const Benefits = styled.div`
   width: 70%;
   max-width: 1660px;
   gap: 32px;
+  margin-top: 30px;
   ${Media.Tablet} {
     min-height: 80vh;
     overflow: auto;
