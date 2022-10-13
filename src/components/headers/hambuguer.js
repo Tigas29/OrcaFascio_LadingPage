@@ -34,10 +34,10 @@ export default function HeaderMob() {
               size={50}
               onClick={() => setMenuIsVisible(false)}
             />
-            <Link to="/">Home</Link>
-            <Link to="/sobreNos">Benefícios</Link>
-            <Link to="/Servico">Depoimentos</Link>
-            <Link to="/Contato">Confira !</Link>
+            <a href="/">Home</a>
+            <a href="/#Promoção!">Confira</a>
+            <a href="/#beneficios">Benefícios</a>
+            <a href="/#Depoimentos">Depoimentos !</a>
           </div>
         </nav>
       </div>

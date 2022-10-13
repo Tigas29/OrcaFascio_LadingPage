@@ -3,7 +3,7 @@ import { Footerr } from "./style";
 import { Link } from "react-router-dom";
 import {
   AiOutlineInstagram,
-  AiOutlineWhatsApp,
+  AiOutlineFacebook,
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineYoutube,
@@ -19,20 +19,26 @@ export default function Footer3() {
         </div>
         <div className="rowPart">
           <div>
-            <a href="">
+            <a href="https://www.instagram.com/orcafascio/" target="blanked">
               <AiOutlineInstagram className="icon" />
             </a>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/company/orcafascio/"
+              target="blanked"
+            >
               <AiOutlineLinkedin className="icon" />
             </a>
-            <a href="">
-              <AiOutlineWhatsApp className="icon" />
-            </a>{" "}
-            <a href="">
+            <a href="https://twitter.com/orcafascio_of" target="blanked">
               <AiOutlineTwitter className="icon" />
             </a>{" "}
-            <a href="">
+            <a
+              href="https://www.youtube.com/c/Or%C3%A7aFascio3F"
+              target="blanked"
+            >
               <AiOutlineYoutube className="icon" />
+            </a>
+            <a href="https://www.facebook.com/orcafascio" target="blanked">
+              <AiOutlineFacebook className="icon" />
             </a>
           </div>
           <div className="direction">

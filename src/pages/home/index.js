@@ -49,7 +49,7 @@ export function Home() {
             </h3>
             <p>Um desconto jamais feito, vai ficar de fora?</p>
             <div className="btnContainer">
-              <a href="">
+              <a href="https://www.orcafascio.com/" target="blanked">
                 <button className="moreButton">Saiba Mais</button>
               </a>
             </div>
@@ -60,29 +60,36 @@ export function Home() {
         </div>
       </Promocao>
 
-      <Benefits id="teste">
+      <Benefits id="beneficios">
         <div className="tittle">
           <h1>ALGUMAS FACILIDADES QUE TEMOS NA NOSSA PLATAFORMA</h1>
         </div>
         <div className="cardContainer">
           <div className="cardsServices">
             {Services.map((item) => (
-              <div className="card">
-                <div className="cardBody">
-                  <img
-                    className="iconService"
-                    src={item.img}
-                    alt="Detalhes em vermelho"
-                  />
-                  <div className="cardTitleContainer">
-                    <h1 className="cardtittle">{item.tittle}</h1>
+              <a className="linkTo" href={item.url} target="blanked">
+                <div className="card">
+                  <div className="cardBody">
+                    <img
+                      className="iconService"
+                      src={item.img}
+                      alt="Detalhes em vermelho"
+                    />
+                    <div className="cardTitleContainer">
+                      <h1 className="cardtittle">{item.tittle}</h1>
 
-                    <span className="descriptionItem">{item.paragraf}</span>
+                      <span className="descriptionItem">{item.paragraf}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
+        </div>
+        <div className="btnContainer">
+          <a href="https://www.orcafascio.com/porque/" target="blanked">
+            <button className="moreButton">Saiba Mais</button>
+          </a>
         </div>
       </Benefits>
       <Benefits2>
@@ -118,7 +125,7 @@ export function Home() {
           </div>
         </div>
       </Benefits2>
-      <Feedbacks>
+      <Feedbacks id="Depoimentos">
         <h1> Ainda em Dúvida ?</h1>
         <div className="Container">
           <div className="rowcontent">

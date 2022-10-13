@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Container } from "./styleHeader.js";
 import logotipo from "../../imgs/logotipo.svg";
@@ -16,33 +16,29 @@ export default function Header1() {
         <header>
           <div className="left">
             <div className="LinkContent">
-              <Link to="/">
+              <a href="/">
                 <p>Home</p>
-              </Link>
-              <hr className={`${path === "/" ? "active" : ""}`} />
+              </a>
             </div>
             <div className="LinkContent">
-              <Link to="/sobreNos">
-                <p>Benefícios</p>
-              </Link>
-              <hr className={`${path === "/sobreNos" ? "active" : ""}`} />
+              <a href="#Promoção!">
+                <p>Confira</p>
+              </a>
             </div>
           </div>
-          <Link to="/">
+          <a href="/">
             <img className="logo" src={logotipo} alt="loqgo" />
-          </Link>
+          </a>
           <div className="right">
             <div className="LinkContent">
-              <Link to="/Contato">
-                <p>Depoimentos</p>
-              </Link>
-              <hr className={`${path === "/Contato" ? "active" : ""}`} />
+              <a href="#beneficios">
+                <p>Benefícios</p>
+              </a>
             </div>
             <div className="LinkContent">
-              <Link to="/Servico">
-                <p>Confira!</p>
-              </Link>
-              <hr className={`${path === "/Servico" ? "active" : ""}`} />
+              <a href="#Depoimentos">
+                <p>Depoimentos</p>
+              </a>
             </div>
           </div>
         </header>

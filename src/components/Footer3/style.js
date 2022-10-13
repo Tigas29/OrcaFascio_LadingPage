@@ -55,8 +55,8 @@ export const Footerr = styled.div`
       ${Media.PhoneLarge} {
         margin-left: 2vw;
         color: #fff;
-        width: 5vw;
-        height: 5vh;
+        width: 10vw;
+        height: 10vh;
       }
     }
   }

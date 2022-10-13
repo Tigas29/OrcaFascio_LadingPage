@@ -510,6 +510,39 @@ export const Benefits = styled.div`
       }
     }
   }
+  .btnContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    .moreButton {
+      display: block;
+      cursor: pointer;
+      height: 44px;
+      background: linear-gradient(
+        90.08deg,
+        #11437e 0.07%,
+        #2c4c71 45.64%,
+        #093b76 91.63%
+      );
+      border-radius: 4px;
+      width: 15vw;
+      margin: auto;
+      ${Media.Laptop} {
+        width: 100%;
+      }
+      /* texto do botao */
+      font-family: "Lato";
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: #ffffff;
+      :hover {
+        animation: ${Down} 1s infinite, cubic-bezier(0.45, 0.05, 0.55, 0.95);
+      }
+    }
+  }
 `;
 export const Benefits2 = styled.div`
   width: 100%;
@@ -724,6 +757,7 @@ export const Feedbacks = styled.div`
           }
         }
         .swiper {
+          cursor: grab;
           width: 100%;
           --swiper-theme-color: #ffffff;
           margin-left: auto;
