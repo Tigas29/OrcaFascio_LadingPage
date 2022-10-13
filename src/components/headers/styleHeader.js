@@ -23,7 +23,7 @@ export const Container = styled.p`
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    background: #ffffff;
+    background: #333333;
     box-shadow: 8.66007px 3.60836px 72.1672px rgba(0, 0, 0, 0.18);
     border-radius: 14px;
     margin-top: 40px;
@@ -36,7 +36,7 @@ export const Container = styled.p`
       }
       font-family: "Lato";
       text-align: center;
-      color: #312e2e;
+      color: #f0fbff;
       font-weight: 400;
       cursor: pointer;
     }
@@ -76,7 +76,7 @@ export const Container = styled.p`
       bottom: 0;
       width: 3%;
       border: none;
-      border: 1px solid #03608d;
+      border: 1px solid #ffc107;
     }
   }
 `;

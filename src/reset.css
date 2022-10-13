@@ -108,7 +108,7 @@ section {
 
 body {
   line-height: 1;
-  background-color: #ECF0F1;
+background: linear-gradient(180deg, #333333 1.06%, #302F2F 51.7%, #333333 100%);
 }
 
 ol,

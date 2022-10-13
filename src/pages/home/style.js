@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import backgroundchoseUs from "../../imgs/backgroundChosenUs.svg";
+import backgroundchoseUs from "../../imgs/backgroundChosenUs.png";
+import backgroundFrontCover from "../../imgs/Computador/backgroundFrontCover.png";
+
 const Media = {
   Laptop: "@media(max-width:1220px)",
   Nav: "@media(max-width:1000px)",
@@ -17,207 +19,191 @@ export const Main = styled.div`
   }
 `;
 export const Capa = styled.div`
-  body {
-    scroll-behavior: smooth;
-  }
+  background: url(${backgroundFrontCover}) no-repeat center;
+  background-size: cover;
+  .line {
+    position: absolute;
+    right: 0;
 
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 71%,
-    rgba(255, 255, 255, 1) 71%,
-    rgba(140, 46, 46, 1) 71%
-  );
-  ${Media.Tablet} {
-    background: white;
-  }
-  .backgroundtablet {
-    display: none;
-    ${Media.Tablet} {
-      display: block;
-    }
+    width: 30vw;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      #333333 1.06%,
+      #302f2f 51.7%,
+      #333333 100%
+    );
   }
   .containerCapa {
+    mix-blend-mode: normal;
     scroll-behavior: smooth;
-
     position: relative;
-    height: 94vh;
-    width: 90%;
+    width: 70%;
+    max-width: 1600px;
+    min-height: 100vh;
     display: flex;
     margin: auto;
     align-items: center;
-    justify-content: space-around;
-    ${Media.Tablet} {
-      height: 100vh;
+    justify-content: center;
+
+    .containerLeft {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 52px;
+
+      z-index: 10;
     }
+
+    .textContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      ${Media.PhoneLarge} {
+        flex-direction: column;
+      }
+      h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        background: -webkit-linear-gradient(
+          90deg,
+          #ffc107 0%,
+          #ffd145 57.94%,
+          #ffc107 104.06%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+
+        ${Media.Laptop} {
+          font-size: 36px;
+        }
+        ${Media.Tablet} {
+          font-size: 34px;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      span {
+        font-family: "Inter", sans-serif;
+        font-weight: 900;
+        font-size: 40px;
+        color: #f0fbff;
+        text-align: center;
+        color: ${Media.Laptop} {
+          font-size: 36px;
+        }
+        ${Media.Tablet} {
+          font-size: 34px;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+    }
+
+    p {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      font-family: "inter";
+      font-weight: 900;
+      font-size: 25px;
+      background: linear-gradient(
+        90deg,
+        #ffc107 0%,
+        #ffd145 57.94%,
+        #ffc107 104.06%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      ${Media.Laptop} {
+        font-size: 20px;
+      }
+      ${Media.Tablet} {
+        font-size: 18px;
+        display: flex;
+      }
+      ${Media.PhoneLarge} {
+        display: block;
+        margin: auto;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
     .imageArrowContr {
       position: relative;
       scroll-behavior: smooth;
 
       .imageArrowDown {
-        position: absolute;
+        position: initial;
         scroll-behavior: smooth;
 
         width: 75px;
         height: 78px;
         cursor: pointer;
         display: block;
-        margin: 100px auto;
-        margin-bottom: 10px;
         :hover {
           animation: ${Down} 1s infinite, cubic-bezier(0.45, 0.05, 0.55, 0.95);
-        }
-        left: 50%;
-      }
-      ${Media.Tablet} {
-        display: none;
-      }
-    }
-    ${Media.PhoneLarge} {
-      flex-direction: column-reverse;
-    }
-    .containerLeft {
-      ${Media.Tablet} {
-        height: 0vh;
-        ${Media.PhoneLarge} {
-          height: auto;
-          width: 100%;
-        }
-      }
-
-      .textContainer {
-        max-width: 30vw;
-        ${Media.Tablet} {
-          max-width: 40vw;
-        }
-        ${Media.PhoneLarge} {
-          max-width: 100vw;
-          margin: auto;
-        }
-        h1 {
-          font-family: "Lilita One";
-          font-weight: 400;
-          font-size: 40px;
-          color: #312e2e;
-          ${Media.Laptop} {
-            font-size: 36px;
-          }
-          ${Media.Tablet} {
-            font-size: 34px;
-          }
-          ${Media.PhoneLarge} {
-            font-size: 30px;
-            text-align: center;
-          }
-          span {
-            font-family: "Lilita One";
-            font-weight: 400;
-            font-size: 40px;
-            color: #8c2e2e;
-            ${Media.Laptop} {
-              font-size: 36px;
-            }
-            ${Media.Tablet} {
-              font-size: 34px;
-            }
-            ${Media.PhoneLarge} {
-              font-size: 30px;
-              text-align: center;
-            }
-          }
-        }
-      }
-
-      p {
-        margin-top: 10px;
-        font-family: "Lato";
-        font-weight: 400;
-        font-size: 25px;
-        color: #000000;
-        opacity: 0.6;
-        ${Media.Laptop} {
-          font-size: 20px;
-        }
-        ${Media.Tablet} {
-          font-size: 18px;
-          display: flex;
-        }
-        ${Media.PhoneLarge} {
-          display: block;
-          margin: auto;
-          font-size: 15px;
-          text-align: center;
-        }
-      }
-
-      .iconsContainer {
-        display: none;
-        ${Media.Tablet} {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-
-        ${Media.PhoneLarge} {
-          justify-content: center;
-          gap: 30px;
-        }
-        gap: 50px;
-        margin-top: 20px;
-        .icons {
-          color: #8c2e2e;
-          width: 50px;
-          height: 50px;
-        }
-      }
-    }
-    .teste {
-      ${Media.Tablet} {
-        width: 50vw;
-        height: 60vh;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: -50px;
-      }
-
-      ${Media.PhoneLarge} {
-        height: 8vh;
-      }
-      .imageContainer {
-        ${Media.Tablet} {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          /* margin-top: -40%; */
-          img {
-          }
-        }
-        .capaImage {
-          width: 30vw;
-
-          ${Media.Tablet} {
-            max-width: 300px;
-
-            margin-top: -9vh;
-          }
-          ${Media.PhoneLarge} {
-            width: 65vw;
-          }
-        }
-        .backgroundtablet {
-          ${Media.Tablet} {
-            max-width: 300px;
-          }
-          ${Media.PhoneLarge} {
-            max-width: 280px;
-          }
         }
       }
     }
   }
+  .teste {
+    ${Media.Tablet} {
+      width: 50vw;
+      height: 60vh;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -50px;
+    }
+
+    ${Media.PhoneLarge} {
+      height: 8vh;
+    }
+    .imageContainer {
+      ${Media.Tablet} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* margin-top: -40%; */
+        img {
+        }
+      }
+      .capaImage {
+        width: 30vw;
+
+        ${Media.Tablet} {
+          max-width: 300px;
+
+          margin-top: -9vh;
+        }
+        ${Media.PhoneLarge} {
+          width: 65vw;
+        }
+      }
+      .backgroundtablet {
+        ${Media.Tablet} {
+          max-width: 300px;
+        }
+        ${Media.PhoneLarge} {
+          max-width: 280px;
+        }
+      }
+    }
+  }
+
   .socialMediasCont {
     ${Media.Tablet} {
       display: none;
@@ -241,108 +227,109 @@ export const Capa = styled.div`
   }
 `;
 
-export const WhoWeAre = styled.div`
-  height: 100vh;
-  background: #fff;
+export const Promocao = styled.div`
+  background: linear-gradient(
+    90.08deg,
+    #11437e 0.07%,
+    #2c4c71 45.64%,
+    #093b76 91.63%
+  );
+  background-size: contain;
+  z-index: 90;
+  min-height: 65vh;
   display: flex;
-  ${Media.Tablet} {
-  }
   ${Media.PhoneLarge} {
-    height: 150vh;
+    min-height: 80vh;
   }
-  .whoWeAreCont {
-    width: 90%;
-    /* padding: 50px 0; */
+  .containerPromotion {
+    width: 70%;
+    max-width: 1660px;
+
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    ${Media.PhoneLarge} {
+    ${Media.Laptop} {
       flex-direction: column;
       gap: 15px;
     }
-    .imageArea {
-      width: 30vw;
-      ${Media.Tablet} {
-        width: 30vw;
-      }
-      ${Media.PhoneLarge} {
-        width: 65vw;
-      }
+    ${Media.PhoneLarge} {
+      width: 90%;
     }
-
-    .depoimentArea {
-      display: block;
-      width: 60%;
+    .promotionText {
+      display: flex;
+      flex-direction: column;
       margin: auto;
+      gap: 32px;
+
       ${Media.PhoneLarge} {
         width: 90%;
       }
       h3 {
-        width: 86%;
-        margin: auto;
+        width: 50%;
         text-align: left;
-        font-family: "Lato";
-        font-size: 25px;
-        color: #312e2e;
+        font-family: "inter";
+        font-size: 40px;
+        font-weight: 900;
+        color: #f6f6f6;
 
         ${Media.Laptop} {
-          font-size: 20px;
+          font-size: 35px;
         }
         ${Media.Tablet} {
-          font-size: 17px;
-          line-height: 19px;
+          margin: auto;
+          text-align: center;
+          width: 80%;
+          font-size: 33px;
         }
 
         ${Media.PhoneLarge} {
-          font-size: 15px;
-          line-height: 18px;
+          width: 100%;
+          font-size: 33px;
           text-align: center;
         }
-      }
 
-      span {
-        font-family: "Secular One", sans-serif;
-        font-style: italic;
-        font-size: 100px;
-        text-align: center;
-        opacity: 0.54;
-        :nth-child(3) {
-          float: right;
-          font-size: 100px;
-          ${Media.Laptop} {
-            font-size: 90px;
-          }
+        span {
+          color: #ffd145;
         }
+      }
+      p {
+        width: 50%;
+        text-align: left;
+        font-family: "inter";
+        font-size: 37px;
+        font-weight: 400;
+        color: #f6f6f6;
         ${Media.Laptop} {
-          font-size: 90px;
+          width: 100%;
+          font-size: 35px;
+          text-align: center;
         }
         ${Media.Tablet} {
-          font-size: 80px;
+          font-size: 25px;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 20px;
         }
       }
     }
   }
   .btnContainer {
-    width: 83%;
-    margin: auto;
-    ${Media.PhoneLarge} {
-      width: 90%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto;
-    }
     .moreButton {
       display: block;
-      margin-top: 100px;
-      width: 143px;
+      width: 30vw;
       cursor: pointer;
       height: 44px;
-      background: #107fb5;
-
-      ${Media.PhoneLarge} {
-        margin-top: 0;
+      background: linear-gradient(
+        180deg,
+        #333333 1.06%,
+        #302f2f 51.7%,
+        #333333 100%
+      );
+      border-radius: 4px;
+      width: 100%;
+      ${Media.Laptop} {
+        width: 100%;
       }
       /* texto do botao */
       font-family: "Lato";
@@ -355,198 +342,47 @@ export const WhoWeAre = styled.div`
       :hover {
         animation: ${Down} 1s infinite, cubic-bezier(0.45, 0.05, 0.55, 0.95);
       }
-
-      ${Media.Laptop} {
-        /* font-size: 90px; */
-      }
-      ${Media.Tablet} {
-        width: 143px;
-        cursor: pointer;
-        height: 44px;
-        border-radius: 5px;
-      }
+    }
+  }
+  .imageArea {
+    width: 38vw;
+    img {
+      max-width: 600px;
+    }
+    ${Media.Tablet} {
+      width: 30vw;
+    }
+    ${Media.PhoneLarge} {
+      width: 70vw;
     }
   }
 `;
-
-export const WhyChooseUs = styled.div`
-  width: 100%;
-  height: 80vh;
-  background: url(${backgroundchoseUs});
-  background-repeat: no-repeat;
-  background-size: cover;
+export const Benefits = styled.div`
+  margin: auto;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  ${Media.PhoneLarge} {
-    height: 110vh;
-    padding-top: 20px;
+  flex-direction: column;
+  width: 70%;
+  max-width: 1660px;
+  gap: 32px;
+  ${Media.Tablet} {
+    min-height: 80vh;
+    overflow: auto;
   }
-  .Container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    width: 90%;
-
-    ${Media.PhoneLarge} {
-      flex-direction: column;
-      gap: 90px;
-    }
-    .ourEmplyess {
-      position: relative;
-      .employees {
-        ${Media.PhoneLarge} {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-
-      .photoemplyees {
-        width: 40vw;
-        ${Media.Tablet} {
-          width: 80%;
-        }
-        ${Media.PhoneLarge} {
-          width: 90vw;
-        }
-      }
-      .whitebox {
-        position: absolute;
-        left: 53%;
-        top: 90%;
-        width: 292px;
-        height: 112px;
-        background: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        ${Media.Laptop} {
-          width: 240px;
-          height: 90px;
-        }
-        ${Media.Tablet} {
-          width: 202px;
-          height: 60px;
-          left: 40%;
-        }
-        ${Media.PhoneLarge} {
-          width: 180px;
-          height: 50px;
-          left: 30%;
-        }
-        p,
-        span {
-          font-family: "Lato";
-          font-size: 25px;
-          text-align: center;
-          color: #312e2e;
-          margin-bottom: 30px;
-          ${Media.Laptop} {
-            font-size: 20px;
-          }
-          ${Media.Tablet} {
-            font-size: 17px;
-            margin-bottom: 13px;
-          }
-          ${Media.PhoneLarge} {
-            font-size: 15px;
-            margin-bottom: 10px;
-          }
-        }
-
-        span {
-          display: block;
-          margin: auto;
-          font-weight: bold;
-          color: #03608d;
-        }
-      }
-    }
-
-    .WhyChooseUs {
-      width: 40%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 70px;
-      ${Media.PhoneLarge} {
-        width: 90%;
-      }
-    }
-    .tittle {
-      h1 {
-        font-family: "Lilita One";
-        font-weight: 400;
-        font-size: 37px;
-        text-align: center;
-        color: #ffffff;
-        margin-bottom: 30px;
-        ${Media.Laptop} {
-          font-size: 32px;
-        }
-        ${Media.Tablet} {
-          font-size: 25px;
-        }
-        ${Media.PhoneLarge} {
-          font-size: 30px;
-        }
-      }
-      .detailsRed {
-        position: absolute;
-        right: 600px;
-        width: 250px;
-        ${Media.Laptop} {
-          right: 350px;
-          width: 200px;
-        }
-        ${Media.Tablet} {
-          right: 19%;
-          width: 146px;
-        }
-        ${Media.PhoneLarge} {
-          display: block;
-          position: relative;
-          margin: auto;
-          width: 200px;
-        }
-      }
-    }
-  }
-  .skills {
-    img {
-      width: 24vw;
-      max-width: 350px;
-      /* ${Media.Laptop} {
-          width: 24vw;
-        } */
-      ${Media.PhoneLarge} {
-        width: 65vw;
-      }
-    }
-  }
-`;
-
-export const OurServices = styled.div`
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  width: 90%;
-  overflow: auto;
-  /* height: 90vh; */
   .tittle {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 24px;
     h1 {
-      font-family: "Lilita One";
-      font-weight: 400;
+      font-family: "inter";
+      font-weight: 900;
       font-size: 40px;
       text-align: center;
-      color: #312e2e;
+      color: #f0fbff;
 
       ${Media.Laptop} {
         font-size: 35px;
@@ -579,7 +415,6 @@ export const OurServices = styled.div`
     }
 
     .cardsServices {
-      margin-top: 50px;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -592,14 +427,18 @@ export const OurServices = styled.div`
 
       .card {
         width: 28vw;
+        max-width: 500px;
+        margin-left: 2vw;
         height: 439px;
-        background: #ffffff;
+        background: linear-gradient(
+          180deg,
+          rgba(51, 51, 51, 1) 50%,
+          rgba(240, 251, 255, 1) 50%
+        );
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-        ${Media.Laptop} {
-          /* width: 160px; */
-        }
+
         ${Media.Tablet} {
-          width: 300px;
+          min-width: 260px;
         }
 
         .cardBody {
@@ -610,31 +449,39 @@ export const OurServices = styled.div`
           margin: auto;
           width: 80%;
           height: 100%;
-          gap: 78px;
-          /* overflow: hidden; */
+          gap: 154px;
           .iconService {
             width: 150px;
-            height: 100px;
+            height: 150px;
             ${Media.Laptop} {
               width: 130px;
-              height: 80px;
+              height: 140px;
             }
             ${Media.Tablet} {
               width: 300px;
-              height: 50px;
+              height: 120px;
             }
             ${Media.PhoneLarge} {
               width: 200px;
-              height: 50px;
+              height: 100px;
             }
           }
 
           .cardtittle {
-            font-family: "Lilita One";
+            font-family: "inter";
             font-style: normal;
             font-size: 30px;
+            font-weight: 900;
             text-align: center;
-            color: #312e2e;
+            background: linear-gradient(
+              180deg,
+              #333333 1.06%,
+              #302f2f 51.7%,
+              #333333 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             ${Media.Laptop} {
               font-size: 25px;
             }
@@ -644,7 +491,7 @@ export const OurServices = styled.div`
             }
           }
 
-          .showMoreMessage {
+          .descriptionItem {
             font-family: "Lato";
             font-size: 20px;
             text-align: center;
@@ -659,17 +506,123 @@ export const OurServices = styled.div`
               font-size: 13px;
             }
           }
+        }
+      }
+    }
+  }
+`;
+export const Benefits2 = styled.div`
+  width: 100%;
+  min-height: 80vh;
+  background: url(${backgroundchoseUs});
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${Media.PhoneLarge} {
+    min-height: 60vh;
+  }
+  .Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    max-width: 1600px;
+    gap: 32px;
 
-          .buttonGoToPage {
-            transform: rotate(270deg);
-            width: 90px;
-            cursor: pointer;
-            transition: all 0.3s ease-out;
+    ${Media.PhoneLarge} {
+      width: 90%;
+      flex-direction: column;
+      gap: 90px;
+    }
+
+    .tittle {
+      h1 {
+        font-family: "inter";
+        font-weight: 900;
+        font-size: 37px;
+        text-align: center;
+        color: #f0fbff;
+        ${Media.Laptop} {
+          font-size: 32px;
+        }
+        ${Media.Tablet} {
+          font-size: 25px;
+        }
+        ${Media.PhoneLarge} {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .boxSection {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      ${Media.Tablet} {
+        flex-direction: column;
+        gap: 50px;
+      }
+      .pattern {
+        h1 {
+          font-family: "Inter";
+          font-size: 37px;
+          font-weight: 400;
+          text-align: center;
+          color: #f0fbff;
+          ${Media.Laptop} {
+            font-size: 32px;
+          }
+
+          ${Media.Tablet} {
+            font-size: 25px;
+          }
+          ${Media.PhoneLarge} {
+            font-size: 20px;
+          }
+
+          span {
+            font-weight: 700;
+          }
+        }
+        .ribbon {
+          background: linear-gradient(
+            90.08deg,
+            #11437e 0.07%,
+            #2c4c71 45.64%,
+            #093b76 91.63%
+          );
+          padding: 10px;
+          margin-top: 12px;
+          p {
+            font-family: "Inter";
+            font-style: normal;
+            font-size: 25px;
+            text-align: center;
+            background: linear-gradient(
+              90deg,
+              #ffc107 0%,
+              #ffd145 57.94%,
+              #ffc107 104.06%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
             ${Media.Laptop} {
-              width: 70px;
+              font-size: 20px;
+            }
+            ${Media.Tablet} {
+              font-size: 17px;
             }
             ${Media.PhoneLarge} {
-              width: 50px;
+              font-size: 15px;
             }
           }
         }
@@ -679,34 +632,61 @@ export const OurServices = styled.div`
 `;
 
 export const Feedbacks = styled.div`
-  width: 90%;
+  width: 70%;
+  max-width: 1660px;
   margin: auto;
+  min-height: 70vh;
+  margin-top: 10vh;
+  ${Media.PhoneLarge} {
+    width: 90%;
+  }
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 40px;
+    color: #f0fbff;
+    font-weight: 900;
+    color: ${Media.Laptop} {
+      font-size: 35px;
+    }
+    ${Media.Tablet} {
+      font-size: 33px;
+    }
+    ${Media.PhoneLarge} {
+      font-size: 30px;
+    }
+  }
   .Container {
     margin: auto;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    background: #03608d;
-    ${Media.Tablet} {
-      flex-direction: column;
-    }
+    flex-direction: column;
+
+    background: linear-gradient(
+      90.08deg,
+      #11437e 0.07%,
+      #2c4c71 34.92%,
+      #093b76 91.63%
+    );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 5vh;
     .rowcontent {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: auto;
-      width: 50%;
-      /* height: 50vh; */
-      ${Media.Tablet} {
-        width: 100%;
-      }
+      width: 100%;
+      height: 50vh;
+      gap: 60px;
 
       p {
         margin: auto;
         text-align: center;
-        font-family: "Lilita One";
-        font-weight: 400;
+        font-family: "Inter";
+        font-weight: 500;
         font-size: 37px;
         color: #ffffff;
         ${Media.Laptop} {
@@ -724,11 +704,24 @@ export const Feedbacks = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         margin: auto;
-        width: 95%;
+        width: 80%;
+        height: 50vh;
+        ${Media.Laptop} {
+          width: 100%;
+        }
         .depoimentsAreaContentTittle {
           margin-top: 30px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          top: 25%;
+
+          ${Media.Laptop} {
+            display: none;
+          }
         }
         .swiper {
           width: 100%;
@@ -737,16 +730,17 @@ export const Feedbacks = styled.div`
           margin-right: auto;
           .swiper-pagination,
           .swiper-pagination-clickable .swiper-pagination-bullets {
-            display: none;
+            /* display: none; */
+            bottom: 50px;
           }
         }
       }
       .swiper-slide {
-        /* height: 50vh; */
         text-align: center;
         font-size: 18px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 100px;
         align-items: center;
         flex-direction: column;
         /* gap: 30px; */
@@ -773,189 +767,7 @@ export const Feedbacks = styled.div`
               font-size: 15px;
             }
           }
-          span {
-            font-family: "Secular One", sans-serif;
-            font-style: italic;
-            font-size: 100px;
-            text-align: center;
-            color: #e8edff;
-            display: flex;
-            align-items: flex-start;
-
-            ${Media.Laptop} {
-              font-size: 90px;
-            }
-            ${Media.Tablet} {
-              font-size: 80px;
-            }
-            ${Media.PhoneLarge} {
-              font-size: 60px;
-            }
-            :nth-child(3) {
-              float: right;
-              font-size: 100px;
-
-              ${Media.Laptop} {
-                font-size: 90px;
-              }
-              ${Media.Tablet} {
-                font-size: 80px;
-              }
-              ${Media.PhoneLarge} {
-                font-size: 60px;
-              }
-            }
-          }
         }
-      }
-    }
-    .imageArea {
-      width: 100%;
-      height: 100%;
-      margin: auto;
-      .pcDepoiments {
-        ${Media.Tablet} {
-          display: none;
-        }
-      }
-      .tabletDepoiments {
-        display: none;
-        ${Media.Tablet} {
-          display: block;
-        }
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-`;
-
-export const ContactUs = styled.div`
-  width: 90%;
-  margin: auto;
-  .tittle {
-    margin: 100px 0;
-    font-family: "Lilita One";
-    font-style: normal;
-    font-size: 40px;
-    text-align: center;
-    color: #312e2e;
-
-    ${Media.Laptop} {
-      margin: 80px 0;
-      font-size: 35px;
-    }
-    ${Media.Tablet} {
-      font-size: 33px;
-    }
-    ${Media.PhoneLarge} {
-      font-size: 30px;
-    }
-  }
-
-  .contactContainer {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    background-color: #8c2e2e;
-    justify-content: space-between;
-    ${Media.PhoneLarge} {
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .areaContact {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin: auto;
-
-      .tittlePart {
-        width: 100%;
-        h2 {
-          font-family: "lilita One";
-          font-style: normal;
-          font-size: 40px;
-          text-align: center;
-          color: #d9d9d9;
-
-          ${Media.Laptop} {
-            font-size: 35px;
-          }
-          ${Media.Tablet} {
-            margin: auto;
-            width: 90%;
-            font-size: 33px;
-          }
-          ${Media.PhoneLarge} {
-            margin-top: 20px;
-            width: 100%;
-          }
-        }
-
-        img {
-          margin: 20px;
-          width: 10vw;
-          float: left;
-
-          ${Media.Tablet} {
-            width: 15vw;
-          }
-          ${Media.PhoneLarge} {
-            width: 150px;
-          }
-        }
-      }
-    }
-    .infosContact {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: flex-start;
-      gap: 60px;
-      width: 80%;
-      margin: auto;
-      ${Media.PhoneLarge} {
-        margin-top: 20px;
-        gap: 40px;
-      }
-      .globalSetings {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        p {
-          font-family: "Lato";
-          font-style: normal;
-          font-size: 20px;
-          color: #d9d9d9;
-
-          ${Media.Laptop} {
-            font-size: 15px;
-          }
-          ${Media.Laptop} {
-            font-size: 13px;
-          }
-          ${Media.PhoneLarge} {
-            font-size: 15px;
-          }
-        }
-        .icons {
-          width: 50px;
-          height: 50px;
-          color: #d9d9d9;
-        }
-      }
-      .location {
-      }
-
-      .workTime {
-      }
-
-      .telephone {
       }
     }
   }

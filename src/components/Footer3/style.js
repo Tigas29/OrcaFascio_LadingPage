@@ -7,51 +7,63 @@ const Media = {
 };
 
 export const Footerr = styled.div`
-  width: 90%;
-  margin: auto;
-  flex-direction: column;
+  width: 70%;
+  max-width: 1600px;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  align-content: center;
-
-  ${Media.Tablet} {
-  }
-  .options {
+  margin: auto;
+  gap: 32px;
+  flex-direction: column;
+  .talkToSeller {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-
+    a {
+      font-family: "Lato";
+      font-size: 25px;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      ${Media.Laptop} {
+        font-size: 20px;
+      }
+      ${Media.Tablet} {
+        font-size: 17px;
+      }
+      ${Media.PhoneLarge} {
+        font-size: 15px;
+      }
+    }
+  }
+  .rowPart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
     ${Media.Tablet} {
-      display: none;
+      width: 95%;
+      gap: 32px;
+      flex-direction: column;
+    }
+    .icon {
+      color: #fff;
+      width: 3vw;
+      height: 3vh;
+      ${Media.PhoneLarge} {
+        margin-left: 2vw;
+        color: #fff;
+        width: 5vw;
+        height: 5vh;
+      }
     }
   }
 
-  .dowPart {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    .direction {
-      p {
-        font-family: "Lato";
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-
-        color: #000000;
-
-        /* opacity: 0.67; */
-      }
-    }
-    img {
-      display: block;
-      margin: auto;
-      width: 80px;
-      height: 80px;
-    }
+  .direction {
+    color: white;
+    text-align: center;
+    margin: auto;
   }
 `;

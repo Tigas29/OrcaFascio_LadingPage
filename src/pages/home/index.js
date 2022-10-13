@@ -5,41 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import { Link, NavLink, Route } from "react-router-dom";
 import Header1 from "../../components/headers/header";
 import HeaderMob from "../../components/headers/hambuguer";
-import {
-  Capa,
-  WhoWeAre,
-  WhyChooseUs,
-  OurServices,
-  Feedbacks,
-  ContactUs,
-  Main,
-} from "./style";
-import imageDireita from "../../imgs/Computador/MachineImageRigth.png";
+import { Capa, Promocao, Benefits2, Benefits, Feedbacks, Main } from "./style";
 import setaBaixo from "../../imgs/Computador/setaBaixo.svg";
-import wpp from "../../imgs/WhatsApp.svg";
-import instagram from "../../imgs/Instagram.svg";
-import Luiz from "../../imgs/Computador/LuizMakimoto.png";
-import funcionarios from "../../imgs/Funcionarios.png";
-import backgroundDepoiments from "../../imgs/depoimentsImage.svg";
-import backgroundDepoimentsTablet from "../../imgs/backgroundDepoimentsTablet.svg";
-
-import detalhes from "../../imgs/details.svg";
-import skills from "../../imgs/bloco skils.svg";
-import MapsEmbed from "../../EmbedGoogleMaps/index";
-import graydetails from "../../imgs/graydetails.svg";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import {
-  AiFillCalendar,
-  AiFillPhone,
-  AiOutlineInstagram,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
+import uttilities from "../../imgs/Computador/uttilities.png";
 import Footer3 from "../../components/Footer3/index";
-import backgroundtablet from "../../imgs/Tablets/backgroundcapa.svg";
-import { useState } from "react";
 
 export function Home() {
   return (
@@ -47,34 +18,18 @@ export function Home() {
       <Header1 />
       <HeaderMob />
       <Capa>
+        <div className="line"></div>
         <div className="containerCapa">
           <div className="containerLeft">
             <div className="textContainer">
-              <h1>
-                A <span> melhor</span> e mais<br></br>
-                <span>confiável</span> oficina da região
-              </h1>
-              <p>
-                Desde 1970 trazendo o melhor serviço para nossos clientes.
-              </p>
-              <div className="iconsContainer">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
-                  target="blanked"
-                >
-                  <AiOutlineWhatsApp className="icons" />
-                </a>
-
-                <a
-                  href="https://www.instagram.com/autoeletricopioneiro/"
-                  target="blanked"
-                >
-                  <AiOutlineInstagram className="icons" />
-                </a>
-              </div>
+              <h1>BLACK</h1>
+              <span>‎ FRIDAY</span>
+            </div>
+            <div>
+              <p>A um passo de virar a chave para seus projetos</p>
             </div>
             <div className="imageArrowContr">
-              <a href="#QuemSomos">
+              <a href="#Promoção!">
                 <img
                   className="imageArrowDown"
                   src={setaBaixo}
@@ -83,111 +38,31 @@ export function Home() {
               </a>
             </div>
           </div>
-          <div className="teste">
-            <div className="imageContainer">
-              <img
-                src={backgroundtablet}
-                className="backgroundtablet"
-                alt="Imagem da direita"
-              />
-              <img
-                className="capaImage"
-                src={imageDireita}
-                alt="Imagem da direita"
-              />
-            </div>
-          </div>
-          <div></div>
-        </div>
-
-        <div className="socialMediasCont">
-          <div className="socialMedia">
-            <a
-              href="https://api.whatsapp.com/send?phone=5511941070499&text=Ol%C3%A1%20me%20chamo%20*Seu%20nome*%20e%20gostaria%20de%20saber..."
-              target="blanked"
-            >
-              <img src={wpp} alt="wpp" />
-            </a>
-
-            <a
-              href="https://www.instagram.com/autoeletricopioneiro/"
-              target="blanked"
-            >
-              <img src={instagram} alt="instagram" />
-            </a>
-          </div>
         </div>
       </Capa>
 
-      <WhoWeAre id="QuemSomos">
-        <div className="whoWeAreCont">
-          <div className="imageArea">
-            <img src={Luiz} alt="luiz" />
-          </div>
-          <div className="depoimentArea">
-            <span>“</span>
+      <Promocao id="Promoção!">
+        <div className="containerPromotion">
+          <div className="promotionText">
             <h3>
-              Desde bem jovem, Luiz Makimoto gostava de consertar veículos. Aos
-              14 anos, trabalhou numa oficina que fazia manutenção em carroças.
-              Durante a década de 1960, foi funcionário em algumas oficinas de
-              veículos automotores, sempre buscando a excelência no aprendizado
-              e na qualidade do serviço prestado.
-              <br></br>
-              <br></br>
-              Então,em 1970, abriu sua própria oficina, o Auto Elétrico
-              Pioneiro, no bairro Vila das Belezas, zona sul da cidade de São
-              Paulo...
+              Toda nossa Plataforma está Com <span>80% off </span>
             </h3>
-            <span>"</span>
+            <p>Um desconto jamais feito, vai ficar de fora?</p>
             <div className="btnContainer">
-              <Link to="/sobrenos">
+              <a href="">
                 <button className="moreButton">Saiba Mais</button>
-              </Link>
+              </a>
             </div>
+          </div>
+          <div className="imageArea">
+            <img src={uttilities} alt="luiz" />
           </div>
         </div>
-      </WhoWeAre>
-      <WhyChooseUs>
-        <div className="Container">
-          <div className="ourEmplyess">
-            <div className="employees">
-              <img
-                className="photoemplyees"
-                src={funcionarios}
-                alt="funcionarios"
-              />
-              <div className="whitebox">
-                <div className="text">
-                  <p> Anos de experiência</p>
-                  <span>Desde 1970</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      </Promocao>
 
-          <div className="WhyChooseUs">
-            <div className="tittle">
-              <h1>Porque escolher a Pioneiro?</h1>
-              <img
-                className="detailsRed"
-                src={detalhes}
-                alt="Detalhes em vermelho"
-              />
-            </div>
-            <div className="skills">
-              <img src={skills} alt="Skills em vermelho" />
-            </div>
-          </div>
-        </div>
-      </WhyChooseUs>
-      <OurServices id="teste">
+      <Benefits id="teste">
         <div className="tittle">
-          <h1> Nossos Serviços</h1>
-          <img
-            className="detailsRed"
-            src={detalhes}
-            alt="Detalhes em vermelho"
-          />
+          <h1>ALGUMAS FACILIDADES QUE TEMOS NA NOSSA PLATAFORMA</h1>
         </div>
         <div className="cardContainer">
           <div className="cardsServices">
@@ -201,32 +76,55 @@ export function Home() {
                   />
                   <div className="cardTitleContainer">
                     <h1 className="cardtittle">{item.tittle}</h1>
-                    <Link to={item.link}>
-                      <span className="showMoreMessage">
-                        Clique para saber mais
-                      </span>
-                    </Link>
-                  </div>
 
-                  <Link to={item.link}>
-                    <img
-                      className="buttonGoToPage"
-                      src={setaBaixo}
-                      alt="Imagem da direita"
-                    />
-                  </Link>
+                    <span className="descriptionItem">{item.paragraf}</span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </OurServices>
+      </Benefits>
+      <Benefits2>
+        <div className="Container">
+          <div className="tittle">
+            <h1>Utilizando nossa plataforma você vai economizar</h1>
+          </div>
+          <div className="boxSection">
+            <div className="hourbox pattern ">
+              <h1>
+                105 Horas <span>/mês</span>
+              </h1>
+              <div className="ribbon">
+                <p>1.260 horas /ano</p>
+              </div>
+            </div>{" "}
+            <div className="days pattern">
+              <h1>
+                13,13 DIAS <span>/mês</span>
+              </h1>
+              <div className="ribbon">
+                <p>1.260 horas /ano</p>
+              </div>
+            </div>{" "}
+            <div className="money pattern">
+              <h1>
+                R$ 13.335 <span>/mês</span>
+              </h1>
+              <div className="ribbon">
+                <p>1.260 horas /ano</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Benefits2>
       <Feedbacks>
+        <h1> Ainda em Dúvida ?</h1>
         <div className="Container">
           <div className="rowcontent">
             <div className="depoimentsArea">
               <div className="depoimentsAreaContentTittle">
-                <p>O que os nossos clientes falam de nós </p>
+                <p>Quem compra, recomenda </p>
               </div>
               <Swiper
                 slidesPerView={1}
@@ -242,9 +140,7 @@ export function Home() {
                 {Depoiments.map((item) => (
                   <SwiperSlide>
                     <div className="depoimentText">
-                      <span>“</span>
                       <p>{item.Depoiment}</p>
-                      <span>"</span>
                     </div>
                     <div className="OwnerDepoiment">
                       <p>{item.Nome}</p>
@@ -254,60 +150,9 @@ export function Home() {
               </Swiper>
             </div>
           </div>
-          <div className="imageArea">
-            <img
-              className="pcDepoiments"
-              src={backgroundDepoiments}
-              alt="Imagem de depoimento"
-            />
-            <img
-              className="tabletDepoiments"
-              src={backgroundDepoimentsTablet}
-              alt="Imagem de depoimento"
-            />
-          </div>
         </div>
       </Feedbacks>
-      <ContactUs>
-        <h1 className="tittle">Gostou do nossos serviços?</h1>
-        <div className="contactContainer">
-          <div className="areaContact">
-            <div className="tittlePart">
-              <h2>Entre em contato</h2>
-              <img src={graydetails} alt="Detalhes cinzas" />
-            </div>
-            <div className="infosContact">
-              <div className="location  globalSetings">
-                <FaMapMarkerAlt className="icons" />
-                <a
-                  href="https://www.google.com.br/maps/place/Auto+Técnica+Pioneiro/@-23.6497437,-46.7533495,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce53dec3f7e1a1:0x55bf9de00508414d!8m2!3d-23.6497486!4d-46.7511608"
-                  target="blanked"
-                >
-                  <p>
-                    Estrada de Itapecerica, 1869, Vila Maracanã, 05835-005, S.
-                    Paulo, SP (Ao lado da AABB)
-                  </p>
-                </a>
-              </div>
-              <div className="workTime globalSetings">
-                <AiFillCalendar className="icons" />
-                <p>Segunda à Sexta - 8h às 17h e Sábado - 8h às 12h</p>
-              </div>
-              <div className="telephone globalSetings">
-                <AiFillPhone className="icons" />
-                <p>
-                  {" "}
-                  <a href="tel:+55115512-9313"> (11)5512-9313</a> ou
-                  <a href="tel:+551194107-0499"> (11)94107-0499</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="googleMaps">
-            <MapsEmbed />
-          </div>
-        </div>
-      </ContactUs>
+
       <Footer3 />
     </Main>
   );

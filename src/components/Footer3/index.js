@@ -1,36 +1,42 @@
 import logo from "../../imgs/footer/logo.svg";
 import { Footerr } from "./style";
 import { Link } from "react-router-dom";
+import {
+  AiOutlineInstagram,
+  AiOutlineWhatsApp,
+  AiOutlineTwitter,
+  AiOutlineLinkedin,
+  AiOutlineYoutube,
+} from "react-icons/ai";
 export default function Footer3() {
   return (
     <div>
       <Footerr>
-        <div className="options">
-          <div>
-            <Link to="/sobrenos">
-              <p>Quem somos</p>
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/Servico">
-              <p>Serviços</p>
-            </Link>
-          </div>
-
-          <div>
-            <Link to="/contato">
-              <p>Contato</p>
-            </Link>
-          </div>
+        <div className="talkToSeller">
+          <a href="tel:551141184498" target="blanked">
+            <p>Fale com um de nossos vendedores</p>
+          </a>
         </div>
-
-        <div className="dowPart">
-          <div className="direction">
-            <p>@ 2022 todos os direitos reservados</p>
-          </div>
+        <div className="rowPart">
           <div>
-            <img src={logo} alt="logo" />
+            <a href="">
+              <AiOutlineInstagram className="icon" />
+            </a>
+            <a href="">
+              <AiOutlineLinkedin className="icon" />
+            </a>
+            <a href="">
+              <AiOutlineWhatsApp className="icon" />
+            </a>{" "}
+            <a href="">
+              <AiOutlineTwitter className="icon" />
+            </a>{" "}
+            <a href="">
+              <AiOutlineYoutube className="icon" />
+            </a>
+          </div>
+          <div className="direction">
+            <p>Copyright © 2021 - OrçaFascio - 3F LTDA</p>
           </div>
         </div>
       </Footerr>
