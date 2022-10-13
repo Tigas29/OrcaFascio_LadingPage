@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import backgroundchoseUs from "../../imgs/backgroundChosenUs.png";
 import backgroundFrontCover from "../../imgs/Computador/backgroundFrontCover.png";
-
+import backgroundBenefits from "../../imgs/backgroundBenefits.png";
 const Media = {
   Laptop: "@media(max-width:1220px)",
   Nav: "@media(max-width:1000px)",
@@ -13,18 +13,17 @@ const Down = keyframes`
   0%   { transform: translateY(0); }
         50%  { transform: translateY(10px); }
 `;
-export const Main = styled.div`
+export const Main = styled.body`
   body {
     scroll-behavior: smooth;
   }
 `;
-export const Capa = styled.div`
+export const Capa = styled.header`
   background: url(${backgroundFrontCover}) no-repeat center;
   background-size: cover;
   .line {
     position: absolute;
     right: 0;
-
     width: 30vw;
     height: 100vh;
     background: linear-gradient(
@@ -36,8 +35,6 @@ export const Capa = styled.div`
   }
   .containerCapa {
     mix-blend-mode: normal;
-    scroll-behavior: smooth;
-    position: relative;
     width: 70%;
     max-width: 1600px;
     min-height: 100vh;
@@ -46,13 +43,12 @@ export const Capa = styled.div`
     align-items: center;
     justify-content: center;
 
-    .containerLeft {
+    .containerText {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 52px;
-
       z-index: 10;
     }
 
@@ -60,10 +56,7 @@ export const Capa = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 10;
-      ${Media.PhoneLarge} {
-        flex-direction: column;
-      }
+
       h1 {
         font-family: "Inter", sans-serif;
         font-weight: 900;
@@ -86,7 +79,6 @@ export const Capa = styled.div`
         }
         ${Media.PhoneLarge} {
           font-size: 30px;
-          text-align: center;
         }
       }
       span {
@@ -103,7 +95,6 @@ export const Capa = styled.div`
         }
         ${Media.PhoneLarge} {
           font-size: 30px;
-          text-align: center;
         }
       }
     }
@@ -140,104 +131,25 @@ export const Capa = styled.div`
     }
 
     .imageArrowContr {
-      position: relative;
-      scroll-behavior: smooth;
-
       .imageArrowDown {
-        position: initial;
-        scroll-behavior: smooth;
-
         width: 75px;
         height: 78px;
         cursor: pointer;
-        display: block;
         :hover {
           animation: ${Down} 1s infinite, cubic-bezier(0.45, 0.05, 0.55, 0.95);
         }
       }
     }
   }
-  .teste {
-    ${Media.Tablet} {
-      width: 50vw;
-      height: 60vh;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: -50px;
-    }
-
-    ${Media.PhoneLarge} {
-      height: 8vh;
-    }
-    .imageContainer {
-      ${Media.Tablet} {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        /* margin-top: -40%; */
-        img {
-        }
-      }
-      .capaImage {
-        width: 30vw;
-
-        ${Media.Tablet} {
-          max-width: 300px;
-
-          margin-top: -9vh;
-        }
-        ${Media.PhoneLarge} {
-          width: 65vw;
-        }
-      }
-      .backgroundtablet {
-        ${Media.Tablet} {
-          max-width: 300px;
-        }
-        ${Media.PhoneLarge} {
-          max-width: 280px;
-        }
-      }
-    }
-  }
-
-  .socialMediasCont {
-    ${Media.Tablet} {
-      display: none;
-    }
-    background-color: #f6f6f6;
-    width: 100%;
-    /* height: 5vh; */
-    padding: 10px 0;
-    .socialMedia {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-
-      a,
-      img {
-        width: 50px;
-        cursor: pointer;
-      }
-    }
-  }
 `;
 
-export const Promocao = styled.div`
-  background: linear-gradient(
-    90.08deg,
-    #11437e 0.07%,
-    #2c4c71 45.64%,
-    #093b76 91.63%
-  );
-  background-size: contain;
-  z-index: 90;
+export const Promocao = styled.section`
+  background: url(${backgroundBenefits}) no-repeat;
+  background-size: cover;
   min-height: 65vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
   ${Media.PhoneLarge} {
     min-height: 80vh;
   }
@@ -262,10 +174,7 @@ export const Promocao = styled.div`
       margin: auto;
       gap: 32px;
 
-      ${Media.PhoneLarge} {
-        width: 90%;
-      }
-      h3 {
+      h2 {
         width: 50%;
         text-align: left;
         font-family: "inter";
@@ -362,7 +271,6 @@ export const Benefits = styled.div`
   min-height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   width: 70%;
   max-width: 1660px;
@@ -386,6 +294,7 @@ export const Benefits = styled.div`
 
       ${Media.Laptop} {
         font-size: 35px;
+        margin-top: 30px;
       }
       ${Media.Tablet} {
         font-size: 33px;
@@ -395,9 +304,7 @@ export const Benefits = styled.div`
       }
     }
     img {
-      display: block;
       margin: auto;
-      margin-top: 10px;
       width: 200px;
 
       ${Media.Laptop} {
@@ -553,9 +460,7 @@ export const Benefits2 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${Media.PhoneLarge} {
-    min-height: 60vh;
-  }
+
   .Container {
     display: flex;
     justify-content: center;
@@ -601,13 +506,18 @@ export const Benefits2 = styled.div`
         flex-direction: column;
         gap: 50px;
       }
+
       .pattern {
+        &:nth-child(2) {
+          color: black;
+        }
         h1 {
           font-family: "Inter";
           font-size: 37px;
           font-weight: 400;
           text-align: center;
           color: #f0fbff;
+
           ${Media.Laptop} {
             font-size: 32px;
           }
@@ -715,6 +625,9 @@ export const Feedbacks = styled.div`
       height: 50vh;
       gap: 60px;
 
+      ${Media.PhoneLarge} {
+        height: 60vh;
+      }
       p {
         margin: auto;
         text-align: center;

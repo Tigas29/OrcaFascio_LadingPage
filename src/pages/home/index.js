@@ -1,6 +1,7 @@
 import { Services } from "../../mock/services.js";
 import { Depoiments } from "../../mock/depoiments";
 import { Swiper, SwiperSlide } from "swiper/react";
+import CountUp from "react-countup";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,7 +12,7 @@ import { Capa, Promocao, Benefits2, Benefits, Feedbacks, Main } from "./style";
 import setaBaixo from "../../imgs/Computador/setaBaixo.svg";
 import uttilities from "../../imgs/Computador/uttilities.png";
 import Footer3 from "../../components/Footer3/index";
-
+import "animate.css";
 export function Home() {
   return (
     <Main>
@@ -20,13 +21,15 @@ export function Home() {
       <Capa>
         <div className="line"></div>
         <div className="containerCapa">
-          <div className="containerLeft">
+          <div className="containerText">
             <div className="textContainer">
-              <h1>BLACK</h1>
-              <span>‎ FRIDAY</span>
+              <h1 class="animated__animated animate__bounceIn">BLACK</h1>
+              <span class="animated__animated animate__bounceIn">‎ FRIDAY</span>
             </div>
             <div>
-              <p>A um passo de virar a chave para seus projetos</p>
+              <p class="animate__animated animate__fadeInDown animate__delay-1s">
+                A um passo de virar a chave para seus projetos
+              </p>
             </div>
             <div className="imageArrowContr">
               <a href="#Promoção!">
@@ -44,9 +47,9 @@ export function Home() {
       <Promocao id="Promoção!">
         <div className="containerPromotion">
           <div className="promotionText">
-            <h3>
+            <h2>
               Toda nossa Plataforma está Com <span>80% off </span>
-            </h3>
+            </h2>
             <p>Um desconto jamais feito, vai ficar de fora?</p>
             <div className="btnContainer">
               <a href="https://www.orcafascio.com/" target="blanked">
@@ -55,7 +58,7 @@ export function Home() {
             </div>
           </div>
           <div className="imageArea">
-            <img src={uttilities} alt="luiz" />
+            <img src={uttilities} alt="foto de item para construção" />
           </div>
         </div>
       </Promocao>
@@ -100,26 +103,93 @@ export function Home() {
           <div className="boxSection">
             <div className="hourbox pattern ">
               <h1>
-                105 Horas <span>/mês</span>
+                <CountUp
+                  start={0}
+                  end={105}
+                  delay={0}
+                  separator=" "
+                  decimals={0}
+                  decimal=","
+                  enableScrollSpy="true"
+                  suffix="‎ horas"
+                />
+                <span>/mês</span>
               </h1>
               <div className="ribbon">
-                <p>1.260 horas /ano</p>
+                <p>
+                  {" "}
+                  <CountUp
+                    start={0}
+                    end={1.26}
+                    delay={0}
+                    separator=" "
+                    decimals={3}
+                    decimal="."
+                    enableScrollSpy="true"
+                    suffix="‎ horas/ano"
+                  />
+                </p>
               </div>
             </div>{" "}
             <div className="days pattern">
               <h1>
-                13,13 DIAS <span>/mês</span>
+                <CountUp
+                  start={0}
+                  end={13.13}
+                  delay={0}
+                  separator=" "
+                  decimals={2}
+                  decimal=","
+                  enableScrollSpy="true"
+                  suffix="‎ dias"
+                />
+                <span>/mês</span>
               </h1>
               <div className="ribbon">
-                <p>1.260 horas /ano</p>
+                <p>
+                  {" "}
+                  <CountUp
+                    start={0}
+                    end={157.5}
+                    delay={0}
+                    separator=" "
+                    decimals={1}
+                    decimal=","
+                    enableScrollSpy="true"
+                    suffix="‎ dias/ano"
+                  />
+                </p>
               </div>
             </div>{" "}
             <div className="money pattern">
               <h1>
-                R$ 13.335 <span>/mês</span>
+                R${" "}
+                <CountUp
+                  start={0}
+                  end={13.335}
+                  delay={0}
+                  separator=" "
+                  decimals={3}
+                  decimal="."
+                  enableScrollSpy="true"
+                />
+                <span>/mês</span>
               </h1>
               <div className="ribbon">
-                <p>1.260 horas /ano</p>
+                <p>
+                  {" "}
+                  <CountUp
+                    start={0}
+                    end={160.02}
+                    delay={0}
+                    separator=" "
+                    decimals={3}
+                    decimal="."
+                    enableScrolSpy="true"
+                    prefix="R$ ‎"
+                    suffix="‎/ano"
+                  />
+                </p>
               </div>
             </div>
           </div>

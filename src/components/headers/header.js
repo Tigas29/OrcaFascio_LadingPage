@@ -13,7 +13,7 @@ export default function Header1() {
   return (
     <div>
       <Container>
-        <header>
+        <header class="animate__animated animate__fadeInDown">
           <div className="left">
             <div className="LinkContent">
               <a href="/">

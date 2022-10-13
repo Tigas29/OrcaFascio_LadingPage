@@ -14,7 +14,7 @@ export const Container = styled.p`
     display: none;
   }
   header {
-    z-index: 9999;
+    z-index: 99999;
     width: 90%;
     margin: auto;
     display: flex;
